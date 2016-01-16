@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Front View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="Front" id="vXZ-lx-hvc" customClass="FrontViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAD-Nb-C6B">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="510-VC-XZQ"/>
+                                    <constraint firstAttribute="width" constant="46" id="9I8-ZL-bP8"/>
+                                </constraints>
+                                <state key="normal" title="Flip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9bR-GO-KcQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter some text:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="442-kw-qYu">
+                                <rect key="frame" x="16" y="82" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlA-xc-jem">
+                                <rect key="frame" x="16" y="116" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="cxr-gW-4RZ"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="CAD-Nb-C6B" secondAttribute="centerY" id="1Bw-tn-v94"/>
+                            <constraint firstItem="AlA-xc-jem" firstAttribute="top" secondItem="442-kw-qYu" secondAttribute="bottom" constant="13" id="D3E-cz-Iqf"/>
+                            <constraint firstAttribute="centerX" secondItem="CAD-Nb-C6B" secondAttribute="centerX" id="FWT-4V-A8f"/>
+                            <constraint firstItem="AlA-xc-jem" firstAttribute="leading" secondItem="442-kw-qYu" secondAttribute="leading" id="Lxl-xs-16K"/>
+                            <constraint firstItem="442-kw-qYu" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="62" id="NwH-Rw-flE"/>
+                            <constraint firstItem="AlA-xc-jem" firstAttribute="centerX" secondItem="CAD-Nb-C6B" secondAttribute="centerX" id="WPM-7O-x3T"/>
+                            <constraint firstItem="442-kw-qYu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="Z7q-gJ-Xoj"/>
+                            <constraint firstItem="442-kw-qYu" firstAttribute="trailing" secondItem="AlA-xc-jem" secondAttribute="trailing" id="hx2-IR-QKM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Back View Controller-->
+        <scene sceneID="YNB-Ho-o06">
+            <objects>
+                <viewController storyboardIdentifier="Back" id="9Ps-g5-GPW" customClass="BackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Nf-W6-tEl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zW4-Ql-LkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smE-1s-lDV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQo-cv-Wx5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="gBv-Jy-h4Q"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Back" id="PSH-bK-7GS">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="6QM-SY-Xon">
+                                            <connections>
+                                                <action selector="done:" destination="9Ps-g5-GPW" id="Oco-PN-Ez6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="9Ps-g5-GPW" id="EYU-HG-FlQ"/>
+                                </connections>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40W-Qh-7bi">
+                                <rect key="frame" x="162" y="232" width="276" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="276" id="c5H-Wb-46W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.94594077797202802" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wQo-cv-Wx5" firstAttribute="leading" secondItem="smE-1s-lDV" secondAttribute="leading" id="Efe-56-onw"/>
+                            <constraint firstItem="zW4-Ql-LkI" firstAttribute="top" secondItem="40W-Qh-7bi" secondAttribute="bottom" constant="347" id="F5T-NL-S57"/>
+                            <constraint firstAttribute="trailing" secondItem="wQo-cv-Wx5" secondAttribute="trailing" id="HiJ-WF-ddJ"/>
+                            <constraint firstItem="40W-Qh-7bi" firstAttribute="centerX" secondItem="wQo-cv-Wx5" secondAttribute="centerX" id="Rgv-S4-ATR"/>
+                            <constraint firstItem="wQo-cv-Wx5" firstAttribute="top" secondItem="smE-1s-lDV" secondAttribute="top" id="WGp-nq-SxN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="40W-Qh-7bi" id="f3r-Oi-jbc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev7-aA-o4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="429"/>
+        </scene>
+    </scenes>
+</document>

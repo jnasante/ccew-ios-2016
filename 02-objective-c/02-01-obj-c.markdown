@@ -1,0 +1,511 @@
+Objective-C
+====================================
+
+Introduction to the syntax followed by a look at creating custom classes.
+
+## Primitives and Objects
+
+Obj-C is an object oriented language but it is not purely object oriented. It supports the standard set of C primitives, including bools, ints, unsigned ints, doubles, floats, chars and so on.
+
+In many cases, however, obj-c provides its own version of these primitives, such as `YES` and `NO` for true and false, `BOOL` for boolean, `NSInteger` and `NSUnsignedInteger`, and `CGFloat`. Many of these custom primitives abstract the difference between 32 and 64 bit environments and you are encouraged to use them. You will see them used regularly in the Cocoa Touch frameworks.!
+
+Obj-C also provides a number of common structures which you will become familiar with that are themselves built out of primitives. For example, a `CGPoint` is two `CGFloats`, x and y. A `CGSize` is also two `CGFloats`, width and height. A `CGRect` is a `CGPoint` combined with a `CGSize`. These should look familiar:!
+
+**Example**
+
+```
+BOOL cancelling;NSInteger kOptionsTag = 66;
+CGRect frame = CGRectMake(10, 83, 300, 300);
+CGPoint aPoint = CGPointMake(12, 60);
+
+aPoint.x; // = 12aPoint.y; // = 160
+```
+
+Just about every other value in obj-c, however, is an object, and objects are accessed through pointers. We’ll talk more about pointers more. For now, understand that a pointer is indicated using the asterisk (`*`), which comes from the C language, so that anytime you declare an object variable you are really declaring a pointer variable to that object.
+
+**Example**
+
+```
+NSString * myString;
+NSArray * anArray;
+```
+
+You must declare your object variables this way. If you forget the asterisk, Xcode will not compile the code. Note that primitive data types are generally not accessed with pointers:
+
+```
+NSInteger kOptionsTag = 66;
+NSString * myString;
+```
+
+## Dot Notation and Bracket Notation
+
+When we work with objects we use two kinds of syntax: dot notation and bracket notation.
+
+Dot notation is used for accessing properties, which are the member variables of a class. We call them *instance variables* when dealing with instances of an object. Dot notation is *syntactic sugar* for getting and setting instance variables.
+
+**Example**
+
+```
+self.viewController = mainViewController;
+self.window.rootViewController = self.viewController;
+
+return self.window;
+self.viewController.view;
+```
+
+Note that we are not accessing the instance variables directly but we are using *setters* and *getters* to access them. Setters and getters are special methods for accessing variables. We'll learn more about them below.
+
+In the first two cases we’re using *setters* to set the value of instance variables with the help of the assignment operator `=`. In the second two cases we’re using *getters* to access those instance variables.
+
+In both cases the instance variables belong to an instance of the current class, which we refer to using `self`. `self` refers to the current instance of the class in which these methods and instance variables are themselves implemented.
+
+**Bracket Notation**
+
+When we're not accessing instance variables on objects we're often calling methods on them. Method calls use bracket syntax, which may take some getting use to. With bracket syntax, the object goes on the left and the message we are sending (or the method we are calling) goes on the right.
+
+**Example**
+
+```
+[self magnetometerAlert];
+[optionsTimer invalidate];
+```
+
+We can mix the two syntaxes to send messages to objects that we access via dot notation:
+
+```
+[self.window makeKeyAndVisible];
+[self.view viewWithTag:kOptionsTag];
+```
+
+Because dot notation is just syntactic sugar that actually uses methods -- setters and getters -- anywhere we use dot notation we can use the bracket syntax instead:
+
+```
+// the two expressions are the same
+self.window
+[self window]
+```
+
+**Parameters**
+
+Methods can take parameters. We declare a method with parameters by using a colon `:` followed by the type in parenthesis and the name of the argument:
+
+```
+- (IBAction)showInfo:(id)sender;
+```
+
+We can then call that method with bracket syntax and pass an argument to it using a colon as well:
+
+```
+[anObject showInfo:self];
+```
+
+Methods can take more than one argument. Each additional argument is explicitly named and then uses its own colon, type and argument name:
+
+```
+// declaration
+- (void) showPlacemark:(CLLocation*)placemark name:(NSString*)name;
+// call
+[self showPlacemark:createdPlacemark name:@"name"];
+```
+
+Methods can of course return values as well as take them. The return type is specified at the start of the method within the first parenthesis and then you use the `return` keyword at the end of the implementation to return a value:
+
+```
+- (UIAlertView*) placemarkWriteError
+{
+    UIAlertView *alert = ...
+    return alert;
+}
+```
+
+Use `void` when a method doesn't return a value. `IBAction` is typecast to `void` so that actions connected through interface builder don't return a result.
+
+**Chaining and Nesting**
+
+Getters and setters can be *chained* using dot notation. Simply use more than one dot:
+
+```
+self.textField.text = @"some text";
+```
+
+Here there is an instance variable *textField* on *self* which itself has a *text* property.
+
+We can also *nest* message calls using bracket notation:
+
+```
+[[[self view] viewWithTag:kOptionsTag] setAlpha:0.4];
+```
+
+Evaluate the expression from the inside out. First evaluate `[self view]` which calls `view` on `self` and returns an object, then evaluate `[[self view] viewWithTag:kOptionsTag]` which executes `viewWithTag:` on the returned object, then evaluate `[[[self view] viewWithTag:kOptionsTag] setAlpha:0.4];` which executes `setAlpha` on the result of the previous two expressions.
+
+More examples:
+
+```
+[self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.apple.com"]]];
+
+[self.webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:textField.text]]];
+```
+
+You can always unpack these statements and create local variables to hold each separate object-method pair, but once you grow accustom to it, it is idiomatic to write code this way.
+
+**Class methods and instance methods**
+
+Finally, we have class methods and instance methods. Class methods are singular and universal to the class. They are called on the class type itself. Instance methods are unique to a particular instance and work with that instance’s variables. They are called on a particular instance.
+
+Class method declarations begin with a plus `+` and instance method declarations begin with a minus `-`:
+
+```
+@interface CCTestClass : NSObject
+- (void) instanceMethod;
++ (void) classMethod;
+@end
+
+// Usage
+
+[CCTestClass classMethod]; // called on the class itself
+
+CCTestClass *instance = [[CCTestClass alloc] init];
+[instance instanceMethod]; // called on the instance
+```
+
+Custom class methods are not common in obj-c, although we do see the cooca api use them for convenience methods in place of constructors. 
+
+## Dynamic Typing and Message Sending
+
+Messages or methods: I’ve been using the phrase “send an object a message” instead of the apparently equivalent “call a method on an object”. I’ll probably continue to equivocate, but to be precise we should always say that in Objective-C you send a message to an object.
+
+Objective-C is a dynamically typed language. This is one of its strongest features and can be troublesome for programmers coming from a strong, statically typed language such as Java.
+
+In Java when you declare an object variable as a String or as a Number, you know at compile time that this variable is that kind of object. In Obj-C, an object’s type is not determined at compile time; it is only determined during run time. You don’t know what kind of object you actually have until you use it.
+
+Obviously, we’re specifying the type when we declare the variable, but these are only type hints to the compiler, and you can typecast an object to another type if you need to. This is a simple as prefacing your use of the object with parentheses containing the type, as with primitive typecasting:
+
+```
+// primitive typecasting
+float niceFloat = 1.45;
+int niceInt = (int)niceFloat;
+
+// object typecasting
+UIButton *cell = (UIButton*)[cell viewWithTag:101];
+```
+
+In this example, we are typecasting the object returned by the `viewWithTag:` method to `UIButton`. Normally this method returns an instance of `UIView`, which is the superclass of `UIButton`. But `UIButton` implements additional methods not available on `UIView`, and when we call one of these methods on an object that the compiler thinks is a `UIView`, the compiler will raise a warning. Typecasting hints to the compiler that we really have a `UIButton` here, and that we’re calling methods that it really implements.
+
+Do you see the pitfall? The method returns a `UIView` and we’re telling the compiler that, no, it is actually returning a `UIButton` in this case, so don’t complain when we send `UIButton` messages to that object. How do we know that it returns `UIButton`? We’ve built the interface that way. But when it just returns a `UIView` because we've made mistake, and we try to send a message that is only implemented by `UIButton`, the application will crash.
+
+How are we even allowed to call a method on an object that might not implement it? This is why we differentiate between *calling a method* and *sending a message*. In Java, you have an object, you know what kind of object it is, you know what methods that object implements, and it is determined in advance how that object handles your method call. When we talk about calling a method, we are talking about calling something that really exists: the method. Think of it as the emphasis being on the existing method itself.
+
+In Objective-C, think of the emphasis being on the object instead. We send a message to the object, and the object routes it appropriately. In effect, we are requesting the object to perform some action for us, and that action may or may not exist. The object receives our request-message and can then decide what it wants to do with it. When the method is implemented, the Objective-C runtime routes the message to it. When it does not, a default method is used instead which raises a runtime exception, equivalent to crashing your app if you don’t catch it:
+
+```
+- (void)doesNotRecognizeSelector:(SEL)aSelector;
+```
+
+This kind of dynamic typing method sending allows us to hack the runtime, and you can do some wild stuff like replacing system API implementations with your own methods or adding methods to built-in objects without subclassing them.
+
+**The generic type: id**
+
+In some cases we'll want to indicate to the compiler that we're working with an object but we will not want to provide any hint as to what type of object that is. In these cases we use the generic type `id`:
+
+```
+id someObject;
+```
+
+Note that even though `id` refers to an object and so uses a pointer it does not require the asterisk `*` in its declaration.
+
+## Understanding Properties
+
+Properties are how we declare instance variables in objective-c.  They describe the simple attributes a class manages. They exist independently for each instance of a class we create.
+
+To create a property, in the header file add a `@property` declaration for a variable. The declaration should include at a minimum the variables type and a name for it.
+
+Let's add a property to one of the view controllers from a sample application:
+
+```
+@property NSString *objectTitle;
+```
+
+Note the use of the asterisk `*` to indicate we have a pointer. We can also declare properties for primitive objects:
+
+```
+@property NSInteger myIndex;
+```
+
+Set the values in the `viewDidLoad` method using dot notation and access it using dot notation in one of the `IBAction` methods we have already defined. Access it via `self` in the action method:
+
+```
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.objectTitle = @"Some String Value";
+}
+
+- (IBAction)doSomething:(id)sender
+{
+  NSString *localString = self.objectTitle;
+  NSLog(localString);
+}
+```
+
+Property declarations are another form of *syntactic sugar* for both creating instance variables and *synthesizing* the getters and setters for them. When we declare a property two things happen at compile time. The compiler generates an *iVar* or instance variable for the property associated with the object and it simultaneously creates two methods for accessing that property. 
+
+For `objectTitle` the instance variable will look like:
+
+```
+@interface ExampleClass : NSObject {
+  NSString *_objectTitle;
+}
+
+@end
+```
+
+And the two method definitions will look like:
+
+```
+- (void) setObjectTitle:(NSString *)aString;
+- (NSString*) objectTitle;
+```
+
+Their implementation looks like:
+
+```
+- (void) setObjectTitle:(NSString *)aString {
+    if ( objectTitle != aString ) {
+        objectTitle = aString;
+    }
+}
+
+- (NSString*) objectTitle {
+    return objectTitle;
+}
+```
+
+All access to the property then goes through the accessors. It should now be clear why bracket notation can be used anywhere dot notation is used: we actually just have methods.
+
+**Property Modifiers**
+
+We will often add modifiers to our properties so that a property declaration looks something like this:
+
+```
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
+// or
+@property (strong, nonatomic) NSString *objectTitle;
+```
+
+The modifiers appear in parenthesis `(...)` immediately after the `@property` declaration and instruct the compiler how to build the getter and setter. The two most common kinds modifiers address *atomicity* and *memory management* although there are others such as `readonly` that cause the compiler to generate a getter but not a setter:
+
+```
+@property (readonly) NSString *objectTitle;
+...
+foo.objectTitle // works
+foo.objectTitle = @"some value" // does not work
+```
+
+**Atomicity**
+
+The `nonatomic` modifier offers some memory protections when dealing with threaded access to the getters and setter but it does **not** offer any thread safety. Specifically it ensures that the function call to the getter or accessor completes before the cpu begins addressing another function.
+
+In general the `nonatomic` modifier is used for properties on interface objects because the interface can only be modified from the main thread. If you know you will not be accessing an object from more than one thread you can also declare its properties `nonatomic`, which will significantly improve the speed of the getter and setter.
+
+**Memory Management**
+
+Objective-C uses reference counting to manage the lifecycle of objects created on the heap. Reference counting is not automatic, so it is not the same as garbage collection. We'll have a great deal more to say about this below.
+
+Modern iOS development uses *Automatic Reference Counting* (ARC) as a compile time feature to aid in memory management. ARC requires memory management instructions for properties so that it knows when to retain and release their memory. These instructions describe object ownership. `strong` is one such instruction.
+
+*strong*
+
+Briefly, a `strong` property is one which the parent object takes ownership of. It indicates that the memory required by the property should not be released back to the operating system until the memory required by the object is. The parent object holds on to the original reference until it releases it back to the OS.
+
+*weak*
+
+`weak` means that the parent object does not participate in ownership of the property but only has access to it. The object instance does not manage the memory for this property, and the property may in fact be removed from memory without the parent knowing it.
+
+Weak references are often used when we know that another class which we already have a relationship to is managing that object, such as parent-child classes.
+
+For example, `IBOutlets` on view controllers are often declared `weak` because they refer to view elements that are embedded in the main view that is managed by the view controller, and views always keep a strong reference to any views embedded in them. Consequently the view controller knows that the memory for that property will not be freed until the view controller itself and its view are freed.
+
+Similarly, two objects may refer to one another in a parent-child relationships, where the parent object maintains a reference to a child object and the child object maintains a reference to the parent. The parent's `child` property should be declared `strong` to ensure that the child is not released from memory before the parent no longer needs it, but the child's `parent` property should be `weak` knowing that the parent always owns the child in the first place and will not be freed from memory before the child is:
+
+```
+@interface Parent : NSObject
+@property (strong) Child *child;
+@end
+
+@interface Child : NSObject
+@property (weak) Parent *parent;
+@end
+```
+
+*copy* 
+
+The `copy` modifier means that we make a copy of the object and are using an entirely different object rather than the original. With `strong` properties the parent object on to the original property value. If the original object changes, the parent's reference to that objects reflects that change. With `copy`, the original value might be modified, but the parent object has its own copy of the original which remains unchanged.
+
+**Summary**
+
+Memory management is one of the most difficult topics in objective-c, and property modifiers may seem confusing at first. Follow these simple heuristics for now:
+
+1. Declare `IBOutlet` properties on view controllers as `weak`
+
+2. Declare all other properties on view controllers or other objects as `strong`
+
+There are important exceptions to the second rule such as the parent-child relationships above or with `delegates` which we will address in future chapters.
+
+You should always be explicit about your memory management instructions to the compiler. Specify `strong`, `weak` or `copy` when you declare a property.
+
+## Memory Management in Depth
+
+Objective-C is a reference counted language with all objects accessed through pointers. To understand why reference counting exists it will be helpful to have a basic understanding of pointers.
+
+A pointer is a small location in memory that contains an address to a much larger block of memory. It points to it. Two different pointers can both contain the same address and so point to the same block of memory. We’re using pointers all the time in Objective-C, almost anywhere you encounter the asterisk (`*`).
+
+For example, when I declare a property, my instance variable is a pointer to the memory required by an `NSString` object: 
+
+```
+@property (strong, nonatomic) NSString *objectTitle;
+```
+
+When I declare a local object variable, I am declaring a pointer:
+
+```
+NSString *myString = @"Some String Here";
+```
+
+Now, when I declare a local object variable and then declare a second object variable and assign the first one to it, I am creating two pointers that both contain the same memory address and so point to the same block of memory that actually contains the `NSString` data:
+
+```
+NSString *firstString = @"Some String Here";
+NSString *secondString = firstString;
+
+NSLog(firstString);
+NSLog(secondString);
+```
+
+`NSString` is not a mutable object; you can’t change its contents once you’ve created it. But if you could, any changes made to the `firstString` object would be immediately reflected in the `secondString` object.
+
+Let’s see this in action. Let’s use a mutable string object, `NSMutableString`, which does permit changes:
+
+```
+NSMutableString *firstString = [NSMutableString stringWithString:@"Some String Here"];
+NSMutableString *secondString = firstString;
+    
+NSLog(firstString);
+NSLog(secondString);
+    
+[firstString appendString:@" With some more text"];
+    
+NSLog(firstString);
+NSLog(secondString);
+```
+
+Hopefully this is familiar territory or at least straighforward.
+
+We can also copy the first string, which creates a new block of memory and has our second pointer point to that:
+
+```
+NSMutableString *firstString = [NSMutableString stringWithString:@"Some String Here"];
+NSMutableString *secondString = [firstString copy];
+    
+NSLog(firstString);
+NSLog(secondString);
+
+[firstString appendString:@" With some more text"];
+    
+NSLog(firstString);
+NSLog(secondString);
+```
+
+**Tracking object references**
+
+But we have a problem. You’ve seen that we can pass references to a block of memory around. One or two or three or thirty pointers can all point to the same block, and these pointers might exist in different parts of the application and so be contained within different scopes, e.g. local scope or instance scope. How can the system know when the program is finished with that block of memory? How does the system know there are no more pointers referring to that block?
+
+One solution is garbage collection. A subsystem within the runtime keeps track of all the pointers and what memory blocks they point to. When none of the pointers point to a particular block, that block is reclaimed and made available for other uses.
+
+Reference counting is another solution and the one used by Objective-C. Every instance of a class keeps an internal count of the number of pointers referring to it. That reference is not automatically managed. Instead, whenever I create a new pointer that refers to that memory, I increment the count by one, and whenever I am finished with that block of memory, I decrease the count by one. When the count reaches zero, the object frees itself, which allows the system to reclaim the memory for other uses.
+
+Reference counting allows us to pass around references to blocks of memory from one part of our program to another. When one part of the program is finished with that block, it decreases the count by one. When another part of the program needs to keep it around for future use, it increase the count by one.
+
+Manual reference counting can be a pain in the ass. We’re actually seeing it in action if not explicitly. Every time we `alloc` an object or *allocate* it, we increase the reference count by one. Every time we copy an object, we increase the count by one. Declaring a property as strong is equivalent to increasing the reference count by one whenever we assign a value to it. When we declare a property as weak, we still get a pointer to that block of memory, but we don’t increase the reference count.
+
+So when are we decreasing the reference count? We don't see this explicitly or even implicitly anymore, but in the earlier days of iOS development calls to `release` or `autorelease` on an object would decrease its reference count by one.
+
+**Automatic Reference Counting (ARC)**
+
+It used to be possible to see the explicit memory management used by Objective-C, but it is no longer even an option when creating a new iOS application. By default all iOS projects use *Automatic Reference Counting*, or *ARC*.
+
+ARC is a compile time feature. The compiler is inserting code into your application as it compiles the source code. It’s adding these `autorelease`, `release`, and `retain` (which we didn’t see here) calls to automatically balance the reference count as we go. It’s even automatically generating `dealloc` destructor on our objets and writing in all the `release` calls needed by the object's properties. 
+
+However, we still need to provide instructions to the compiler about how ARC should modify the compiled code to manage runtime memory, which is exactly what the `strong` and `weak` modifiers in our property declarations do. Effectively, `strong` causes the reference count of an object to increase by one when it is assigned to a property, but `weak` does not. Among the many other things Xcode is doing at compile time for memory management.
+
+We will use ARC exclusively for this class, but you must at least be familiar with the underlying mechanism because you will encounter older obj-c code that does not use ARC, and you may need to interact with lower level C code that can’t use it. And of course you should understand why a property is marked as `strong`, `copy` or `weak`.
+
+Again, the heuristic to follow is that if your class needs to keep an object in memory around for longer than the local scope, which will almost always be the case with properties, and you aren’t already holding on to another object that is already managing the first, then you should declare your properties as `strong`. Otherwise mark it as `weak` as with `IBOutlets`.
+
+If you want to ensure that the value of the property doesn’t change when it is accessed through another pointer elsewhere in the program, mark it as `copy`, although you will only need to do this rarely.
+
+## Weak vs Strong: Seeing the Difference
+
+Let's see the difference between a weak and strong property so we can understand what's happening to the memory underneath the hood.
+
+On a view controller declare a weak property for `objectTitle`:
+
+```
+@property (weak) NSString *objectTitle;
+```
+
+In the view controllers `viewDidLoad` method set the property value to an instance of `NSString` (don't use a string literal!):
+
+```
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.objectTitle = [NSString stringWithFormat:@"foo"];
+}
+```
+
+Create a button and an action for that button. In the action access the value of the `objectTitle` and log it to the console:
+
+```
+- (IBAction)doSomething:(id)sender
+{
+  NSString *title = self.objectTitle;
+  NSLog(@"%@",title);
+}
+```
+
+Run the application and press the button. `(null)` is logged to the title instead of the string `@"foo"`. Why?
+
+Modify the property declaration for `objectTitle` so that it is marked  `strong` instead of `weak`:
+
+```
+@property (strong) NSString *objectTitle;
+```
+
+Run the application and press the button again. Now `@"foo"` is correctly logged to the console. Why?
+
+**Insight**
+
+Make the property `weak` again and in the `viewDidLoad` method set the title to a string literal:
+
+```
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.objectTitle = @"foo";
+}
+```
+
+This works. When you press the button the correct value is logged to the console. Why? What is different about using a string literal?
+
+Now try it with a string variable that is created directly from a literal, like so:
+
+```
+- (void)viewDidLoad
+{
+  [super viewDidLoad];
+  self.objectTitle = [NSString stringWithString:@"foo"];
+}
+```
+
+It still works, even though we're clearly instructing the compiler to create a new string in memory that should be released as soon as this method finishes executing. Why does it work?
+
