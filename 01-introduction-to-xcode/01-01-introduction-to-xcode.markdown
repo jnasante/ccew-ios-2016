@@ -66,7 +66,7 @@ Xcode is a complex application, but it wants to help you. We’re learning how t
 
 Look at the XXAppDelegate.h file, where *XX* is the two or three character prefix you specified for your project. This is the *header* file for the application delegate. Obj-C shares similarities with the C language such as the use of header files for the declaration of objects and their methods and properties, and *implementation* files in which the object is actually implemented. These are the *.h* and *.m* files in your Xcode project.
 
-The AppDelegate object is a delegate. The delegate pattern is widely used in Obj-C. Design patterns are re-usable solutions to common software problems. In this case, our problem is that a core class already does most of the work required in a particular situation, but it needs additional behavior in response to certain user actions. In this example we’re talking about the main application class, *UIApplication*, which we haven't encountered yet.
+The AppDelegate object is a delegate. The delegate pattern is widely used in Obj-C. Delegate patterns are re-usable solutions to common software problems. In this case, our problem is that a core class already does most of the work required in a particular situation, but it needs additional behavior in response to certain user actions. In this example we’re talking about the main application class, *UIApplication*, which we haven't encountered yet.
 
 In many languages the solution would be to subclass *UIApplication* and add your custom functionality where needed. In Obj-C the *idiomatic* solution is to use a delegate. The delegate pattern is everywhere in Obj-C and Apple's *UIKit* frameworks. 
 
