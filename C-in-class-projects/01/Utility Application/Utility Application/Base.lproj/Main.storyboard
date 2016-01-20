@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Front View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController storyboardIdentifier="Front" id="vXZ-lx-hvc" customClass="FrontViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CAD-Nb-C6B">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="510-VC-XZQ"/>
+                                    <constraint firstAttribute="width" constant="46" id="9I8-ZL-bP8"/>
+                                </constraints>
+                                <state key="normal" title="Flip">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="flip:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9bR-GO-KcQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is my label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC8-Pl-wlt">
+                                <rect key="frame" x="92" y="120" width="211" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="0.17159172344666718" green="0.15983597972586655" blue="0.99795484293193715" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHA-EN-pyy">
+                                <rect key="frame" x="113" y="174" width="70" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="DO IT"/>
+                                <connections>
+                                    <action selector="doIt:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="m7n-7X-gtp"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is my other label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9s-dq-ctL">
+                                <rect key="frame" x="42" y="289" width="162" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ctp-Om-eFx">
+                                <rect key="frame" x="79" y="318" width="88" height="30"/>
+                                <state key="normal" title="DO IT AGAIN"/>
+                                <connections>
+                                    <action selector="doItAgain:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="d6F-d0-Z1x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92704085724736529" green="1" blue="0.33342456151730426" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="CAD-Nb-C6B" secondAttribute="centerY" id="1Bw-tn-v94"/>
+                            <constraint firstAttribute="centerX" secondItem="CAD-Nb-C6B" secondAttribute="centerX" id="FWT-4V-A8f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myLabel" destination="WC8-Pl-wlt" id="hZn-Fi-gFy"/>
+                        <outlet property="otherLabel" destination="R9s-dq-ctL" id="k4i-6h-yZJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="322"/>
+        </scene>
+        <!--Back View Controller-->
+        <scene sceneID="YNB-Ho-o06">
+            <objects>
+                <viewController storyboardIdentifier="Back" id="9Ps-g5-GPW" customClass="BackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Nf-W6-tEl"/>
+                        <viewControllerLayoutGuide type="bottom" id="zW4-Ql-LkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="smE-1s-lDV">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQo-cv-Wx5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="gBv-Jy-h4Q"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Back" id="PSH-bK-7GS">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="6QM-SY-Xon">
+                                            <connections>
+                                                <action selector="done:" destination="9Ps-g5-GPW" id="Oco-PN-Ez6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="9Ps-g5-GPW" id="EYU-HG-FlQ"/>
+                                </connections>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.94594077797202802" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wQo-cv-Wx5" firstAttribute="leading" secondItem="smE-1s-lDV" secondAttribute="leading" id="Efe-56-onw"/>
+                            <constraint firstAttribute="trailing" secondItem="wQo-cv-Wx5" secondAttribute="trailing" id="HiJ-WF-ddJ"/>
+                            <constraint firstItem="wQo-cv-Wx5" firstAttribute="top" secondItem="smE-1s-lDV" secondAttribute="top" id="WGp-nq-SxN"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ev7-aA-o4u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="337"/>
+        </scene>
+    </scenes>
+</document>
