@@ -106,7 +106,7 @@ NSString *stringTwo = [NSString stringWithString:@"Text"];
 
 The convenience pattern is usually `stringWith` or `arrayWith` or `objectTypeWith` whatever kind of object you are working with. For example, `stringWithString` is a class method on the `NSString` class that simply calls `[[NSString alloc] initWithString:@"Text"]`.
 
-Not all object's provide convenience methods, so it is essential to be familiar with the `[[... alloc] init]` idiom.
+Not all objects provide convenience methods, so it is essential to be familiar with the `[[... alloc] init]` idiom.
 
 ## Custom Constructors
 
