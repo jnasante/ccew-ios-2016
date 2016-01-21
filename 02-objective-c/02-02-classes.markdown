@@ -57,7 +57,7 @@ Set default values for the properties of a `CCPerson`:
 {
     self = [super init];
     if ( self ) {
-    	_firstName = @"Unkonwn";
+    	_firstName = @"Unknown";
 		_lastName = @"Unknown";
 		_nationality = @"United States";
     }
