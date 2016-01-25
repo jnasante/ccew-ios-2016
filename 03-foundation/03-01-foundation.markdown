@@ -173,7 +173,7 @@ NSRange r2 = [example rangeOfString:@"XY"];
 
 `NSRange` is a `struct` with two fields, `location` and `length`. In the above example, `r1` is (location: 2, length: 2) and `r2` is (location: `NSNotFound`, length: 0).
 
-`NSNotFound` is a constant defined as the largest integer value and reprsents "not found" for operations involving ranges and strings.
+`NSNotFound` is a constant defined as the largest integer value and represents "not found" for operations involving ranges and strings.
 
 **Mutable strings**
 
