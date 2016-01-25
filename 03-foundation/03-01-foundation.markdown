@@ -50,7 +50,7 @@ NSString *uppercase = @"UPPERCASE";
 NSString *lowercase = [uppercase lowercaseString];
 
 // or more simply:
-NSString *lowercase = [@"UPPERCASE lowercaseString];
+NSString *lowercase = [@"UPPERCASE" lowercaseString];
 ```
 
 Notice that you can call a method directly on the string literal because the string literal really is an instance of `NSString` once the application is running.
