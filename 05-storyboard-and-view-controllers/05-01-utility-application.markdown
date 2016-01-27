@@ -130,7 +130,7 @@ Select the backside view controller by clicking on its icon. Select the Identity
 
 ![](https://s3.amazonaws.com/okcoders/ios/images/04-01-11-controller-class.png)
 
-Now try dragging from the Done button to the view contorller icon. `dismiss:` shows up under Sent Events. Select it to make the connection. Run the application. You should now be able to transition from the frontside to the backside and back.
+Now try dragging from the Done button to the view controller icon. `dismiss:` shows up under Sent Events. Select it to make the connection. Run the application. You should now be able to transition from the frontside to the backside and back.
 
 ## Preparing for the Segue
 
