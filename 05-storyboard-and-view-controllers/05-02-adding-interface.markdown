@@ -113,7 +113,7 @@ Run the application. Right now nothing happens. Let's add logic to set the secon
 
 Run the application. Nice. Now the first responder changes to the second text field when we press return on the first and the keyboard changes.
 
-Now let's hide the keyboard when the user presse the Done button (return) on the second text field. We'll add our code to the same `textFieldShouldReturn:` method but this time check if the `textField` argument is the password field and if it is call the method `resignFirstResponder` on it, which will cause the keyboard to hide:
+Now let's hide the keyboard when the user presses the Done button (return) on the second text field. We'll add our code to the same `textFieldShouldReturn:` method but this time check if the `textField` argument is the password field and if it is call the method `resignFirstResponder` on it, which will cause the keyboard to hide:
 
 ```objective-c
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
