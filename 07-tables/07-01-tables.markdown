@@ -370,4 +370,4 @@ Run the application again. The row heights are now correct!
 
 ## Summary
 
-Table views are the workhouse of the iOS interface. They embody many of the design patterns that are core to objective-c and iOS development such as Model-View-Controller (MVC), the use of delegates and data sources, and the flyweight pattern. With custom table cells and static cells (which we did not learn about in this chapter) an almost endless variety of interfaces is possible. Moreover an understanding of table views establishes a solid foundation for working with collection views, which you will have practice with in your homework.
+Table views are the workhorse of the iOS interface. They embody many of the design patterns that are core to objective-c and iOS development such as Model-View-Controller (MVC), the use of delegates and data sources, and the flyweight pattern. With custom table cells and static cells (which we did not learn about in this chapter) an almost endless variety of interfaces is possible. Moreover an understanding of table views establishes a solid foundation for working with collection views, which you will have practice with in your homework.
