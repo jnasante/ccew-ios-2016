@@ -31,7 +31,7 @@ Run the application. You'll see that you can switch back and forth between the t
 
 **Adding Tabs**
 
-We'll use interface builder to make changes to the storyboard and add new tabs. Make sure the storyboard file is selected and drag a view controller from the object library to the workspace. Line it up underneat the first and second view controllers. Drag a label into the view and modify the text to identify it as the "Third View".
+We'll use interface builder to make changes to the storyboard and add new tabs. Make sure the storyboard file is selected and drag a view controller from the object library to the workspace. Line it up underneath the first and second view controllers. Drag a label into the view and modify the text to identify it as the "Third View".
 
 To add a third tab to the tab bar controller that corresponds to the view controller we just added, we'll need to establish a relationship between the tab bar controller and the view controller. As you might suspect, we'll do this by control-dragging from the tab bar controller to the new view controller.
 
