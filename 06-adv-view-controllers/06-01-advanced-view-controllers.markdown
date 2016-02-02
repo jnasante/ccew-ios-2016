@@ -113,9 +113,9 @@ Create a new single view application. Select the single view controller in the s
 
 Try running the application. Notice it crashes. That option identifies the main view controller that should be loaded when the application starts. Let's make it a navigation view controller.
 
-Delete the view and view controller provided by the application template and drag in a navigation view controller from the Object Library. Notice that it creates a navigation controller and an immediate relationship with a second view controller. This is a relationships, not a segue, and it identifies the navigation controller's *root view controller*, or the view controller on the bottom of the navigation stack.
+Delete the view and view controller provided by the application template and drag in a navigation view controller from the Object Library. Notice that it creates a navigation controller and an immediate relationship with a second view controller. This is a relationship, not a segue, and it identifies the navigation controller's *root view controller*, or the view controller on the bottom of the navigation stack.
 
-By default we're given a table view, which we don't want. Delete it and drag in vanilla view controller object. We want to make this view controller the root view controller for our navigation controller, which means, you guessed it, we should control-drag from the navigation controller to the new view controller. Choose *root view* under *Relationships Segue*. Run the application.
+By default we're given a table view, which we don't want. Delete it and drag in a view controller object. We want to make this view controller the root view controller for our navigation controller, which means, you guessed it, we should control-drag from the navigation controller to the new view controller. Choose *root view* under *Relationships Segue*. Run the application.
 
 We want to set up a navigation segue to another view. First set a *Title* on the view controller in the Attributes Inspector, call it "Master":
 
