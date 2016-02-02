@@ -123,23 +123,23 @@ We want to set up a navigation segue to another view. First set a *Title* on the
 
 And add a button to the view.
 
-Now drag in a second view controller and place it to the right of the first one. Give it a title as well, call it "Detail". Finally, we want to set up the navigation relationship between the first view controller and the second one, so control-drag from the button in the first view to the second view. Choose *Push* for the *Action Segue*. Notice that the second view controller is now given a simulated navigation bar at the top of its view.
+Now drag in a second view controller and place it to the right of the first one. Give it a title as well, call it "Detail". Finally, we want to set up the navigation relationship between the first view controller and the second one, so control-drag from the button in the first view to the second view. Choose *Show* for the *Action Segue*. Notice that the second view controller is now given a simulated navigation bar at the top of its view.
 
-Previously we had been using *Modal* for *Action Segue*. View in the navigation controller that you want to push onto the navigation stack always use *Push* for the segue.
+Previously we had been using *Present Modally* for *Action Segue*. View in the navigation controller that you want to push onto the navigation stack always use *Show* for the segue.
 
 Run the application. We have the navigation controller mechanic working. Clicking the button slides the second view into place and we can click the Back button to return, but our views are missing titles. We'll fix that in a moment.
 
 **Navigating in Code**
 
-Most of the time we'll be able to set up our push segue's in the storyboard but this may not always be the case. When we have to push from code, we'll need to do a couple things. First we'll need a reference to the navigation controller which manages its stack. This is straightforward, as every view controller maintains a reference to any navigation controller it is embedded in.
+Most of the time we'll be able to set up our show segue's in the storyboard but this may not always be the case. When we have to show from code, we'll need to do a couple things. First we'll need a reference to the navigation controller which manages its stack. This is straightforward, as every view controller maintains a reference to any navigation controller it is embedded in.
 
 Second we'll need to instantiate the view controller we want to push onto the stack. That view controller will still be set up in the storyboard, so we'll need a way to reference the storyboard object from our code. Fortunately, just as segues can have identifiers associated with them, so too can view controllers.
 
 Let's modify our application so that we handle the button action in code and push the second view controller onto the stack manually.
 
-First delete the push segue between the two view controllers. Select the arrow and press delete.
+First delete the show segue between the two view controllers. Select the arrow and press delete.
 
-Second, set up an identifier for the second view controller. Select the view controller (not the view) and in the Identity Inspector set it's *Storyboard ID* to "secondView":
+Second, set up an identifier for the second view controller. Select the view controller (not the view) and in the Identity Inspector set its *Storyboard ID* to "secondView":
 
 ![](https://s3.amazonaws.com/okcoders/ios/images/06-01-03-storyboard-id.png)
 
