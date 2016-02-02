@@ -52,7 +52,7 @@ Run the applictation again. It crashes. What’s happening? It turns out that th
 
 **Protocol conformance**
 
-First, wow do we indicate our class conforms to a protocol? We put the protocol names in greater than and less than signs after the interface declaration for the class:
+First, how do we indicate our class conforms to a protocol? We put the protocol names in greater than and less than signs after the interface declaration for the class:
 
 ```objective-c
 @interface CCViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
