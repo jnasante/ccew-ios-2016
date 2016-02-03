@@ -48,7 +48,7 @@ Hook up the table view’s data source and delegate outlets to our File’s Owne
 
 Now let's add a `tableView` IBOutlet to our view controller so we can refer to the table view from code. This time control-drag from the view controller to the table view.
 
-Run the applictation again. It crashes. What’s happening? It turns out that the table view data source methods are required. Because they are marked as required, the table view doesn’t check to see if the delegate actually implements them. It just calls them. That is part of the contract of conforming to the data source protocol, which we haven’t. Let’s do that and implement our missing methods. 
+Run the application again. It crashes. What’s happening? It turns out that the table view data source methods are required. Because they are marked as required, the table view doesn’t check to see if the delegate actually implements them. It just calls them. That is part of the contract of conforming to the data source protocol, which we haven’t. Let’s do that and implement our missing methods. 
 
 **Protocol conformance**
 
@@ -139,7 +139,7 @@ Now return `20` rows from the other method so we can really see the effect:
 }
 ```
 
-Run the appliction. In the simulator I can scroll the table by clicking on it with the mouse (trackpad), holding it and scrolling.
+Run the application. In the simulator I can scroll the table by clicking on it with the mouse (trackpad), holding it and scrolling.
 
 Let's try a different table view cell. Change the cell type to `UITableViewCellStyleValue1` and add detail text via the `detailTextLabel` property:
 
