@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0366FA01C618EB900618B31 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366F9F1C618EB900618B31 /* main.m */; };
+		D0366FA31C618EB900618B31 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366FA21C618EB900618B31 /* AppDelegate.m */; };
+		D0366FA61C618EB900618B31 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366FA51C618EB900618B31 /* FirstViewController.m */; };
+		D0366FA91C618EB900618B31 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366FA81C618EB900618B31 /* SecondViewController.m */; };
+		D0366FAC1C618EB900618B31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0366FAA1C618EB900618B31 /* Main.storyboard */; };
+		D0366FAE1C618EB900618B31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0366FAD1C618EB900618B31 /* Assets.xcassets */; };
+		D0366FB11C618EB900618B31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0366FAF1C618EB900618B31 /* LaunchScreen.storyboard */; };
+		D0366FBC1C618EBA00618B31 /* NavTab_Power_Combo_UniteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366FBB1C618EBA00618B31 /* NavTab_Power_Combo_UniteTests.m */; };
+		D0366FC71C618EBA00618B31 /* NavTab_Power_Combo_UniteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0366FC61C618EBA00618B31 /* NavTab_Power_Combo_UniteUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0366FB81C618EBA00618B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0366F931C618EB900618B31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0366F9A1C618EB900618B31;
+			remoteInfo = "NavTab-Power-Combo-Unite";
+		};
+		D0366FC31C618EBA00618B31 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0366F931C618EB900618B31 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0366F9A1C618EB900618B31;
+			remoteInfo = "NavTab-Power-Combo-Unite";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0366F9B1C618EB900618B31 /* NavTab-Power-Combo-Unite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NavTab-Power-Combo-Unite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0366F9F1C618EB900618B31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0366FA11C618EB900618B31 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0366FA21C618EB900618B31 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0366FA41C618EB900618B31 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D0366FA51C618EB900618B31 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D0366FA71C618EB900618B31 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D0366FA81C618EB900618B31 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D0366FAB1C618EB900618B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0366FAD1C618EB900618B31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0366FB01C618EB900618B31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0366FB21C618EB900618B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0366FB71C618EBA00618B31 /* NavTab-Power-Combo-UniteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NavTab-Power-Combo-UniteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0366FBB1C618EBA00618B31 /* NavTab_Power_Combo_UniteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavTab_Power_Combo_UniteTests.m; sourceTree = "<group>"; };
+		D0366FBD1C618EBA00618B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0366FC21C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NavTab-Power-Combo-UniteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0366FC61C618EBA00618B31 /* NavTab_Power_Combo_UniteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavTab_Power_Combo_UniteUITests.m; sourceTree = "<group>"; };
+		D0366FC81C618EBA00618B31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0366F981C618EB900618B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FB41C618EBA00618B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FBF1C618EBA00618B31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0366F921C618EB900618B31 = {
+			isa = PBXGroup;
+			children = (
+				D0366F9D1C618EB900618B31 /* NavTab-Power-Combo-Unite */,
+				D0366FBA1C618EBA00618B31 /* NavTab-Power-Combo-UniteTests */,
+				D0366FC51C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests */,
+				D0366F9C1C618EB900618B31 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0366F9C1C618EB900618B31 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0366F9B1C618EB900618B31 /* NavTab-Power-Combo-Unite.app */,
+				D0366FB71C618EBA00618B31 /* NavTab-Power-Combo-UniteTests.xctest */,
+				D0366FC21C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0366F9D1C618EB900618B31 /* NavTab-Power-Combo-Unite */ = {
+			isa = PBXGroup;
+			children = (
+				D0366FA11C618EB900618B31 /* AppDelegate.h */,
+				D0366FA21C618EB900618B31 /* AppDelegate.m */,
+				D0366FA41C618EB900618B31 /* FirstViewController.h */,
+				D0366FA51C618EB900618B31 /* FirstViewController.m */,
+				D0366FA71C618EB900618B31 /* SecondViewController.h */,
+				D0366FA81C618EB900618B31 /* SecondViewController.m */,
+				D0366FAA1C618EB900618B31 /* Main.storyboard */,
+				D0366FAD1C618EB900618B31 /* Assets.xcassets */,
+				D0366FAF1C618EB900618B31 /* LaunchScreen.storyboard */,
+				D0366FB21C618EB900618B31 /* Info.plist */,
+				D0366F9E1C618EB900618B31 /* Supporting Files */,
+			);
+			path = "NavTab-Power-Combo-Unite";
+			sourceTree = "<group>";
+		};
+		D0366F9E1C618EB900618B31 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0366F9F1C618EB900618B31 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0366FBA1C618EBA00618B31 /* NavTab-Power-Combo-UniteTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0366FBB1C618EBA00618B31 /* NavTab_Power_Combo_UniteTests.m */,
+				D0366FBD1C618EBA00618B31 /* Info.plist */,
+			);
+			path = "NavTab-Power-Combo-UniteTests";
+			sourceTree = "<group>";
+		};
+		D0366FC51C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0366FC61C618EBA00618B31 /* NavTab_Power_Combo_UniteUITests.m */,
+				D0366FC81C618EBA00618B31 /* Info.plist */,
+			);
+			path = "NavTab-Power-Combo-UniteUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0366F9A1C618EB900618B31 /* NavTab-Power-Combo-Unite */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0366FCB1C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-Unite" */;
+			buildPhases = (
+				D0366F971C618EB900618B31 /* Sources */,
+				D0366F981C618EB900618B31 /* Frameworks */,
+				D0366F991C618EB900618B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NavTab-Power-Combo-Unite";
+			productName = "NavTab-Power-Combo-Unite";
+			productReference = D0366F9B1C618EB900618B31 /* NavTab-Power-Combo-Unite.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0366FB61C618EBA00618B31 /* NavTab-Power-Combo-UniteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0366FCE1C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-UniteTests" */;
+			buildPhases = (
+				D0366FB31C618EBA00618B31 /* Sources */,
+				D0366FB41C618EBA00618B31 /* Frameworks */,
+				D0366FB51C618EBA00618B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0366FB91C618EBA00618B31 /* PBXTargetDependency */,
+			);
+			name = "NavTab-Power-Combo-UniteTests";
+			productName = "NavTab-Power-Combo-UniteTests";
+			productReference = D0366FB71C618EBA00618B31 /* NavTab-Power-Combo-UniteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0366FC11C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0366FD11C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-UniteUITests" */;
+			buildPhases = (
+				D0366FBE1C618EBA00618B31 /* Sources */,
+				D0366FBF1C618EBA00618B31 /* Frameworks */,
+				D0366FC01C618EBA00618B31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0366FC41C618EBA00618B31 /* PBXTargetDependency */,
+			);
+			name = "NavTab-Power-Combo-UniteUITests";
+			productName = "NavTab-Power-Combo-UniteUITests";
+			productReference = D0366FC21C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0366F931C618EB900618B31 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = josephasante;
+				TargetAttributes = {
+					D0366F9A1C618EB900618B31 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					D0366FB61C618EBA00618B31 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D0366F9A1C618EB900618B31;
+					};
+					D0366FC11C618EBA00618B31 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = D0366F9A1C618EB900618B31;
+					};
+				};
+			};
+			buildConfigurationList = D0366F961C618EB900618B31 /* Build configuration list for PBXProject "NavTab-Power-Combo-Unite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0366F921C618EB900618B31;
+			productRefGroup = D0366F9C1C618EB900618B31 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0366F9A1C618EB900618B31 /* NavTab-Power-Combo-Unite */,
+				D0366FB61C618EBA00618B31 /* NavTab-Power-Combo-UniteTests */,
+				D0366FC11C618EBA00618B31 /* NavTab-Power-Combo-UniteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0366F991C618EB900618B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0366FB11C618EB900618B31 /* LaunchScreen.storyboard in Resources */,
+				D0366FAE1C618EB900618B31 /* Assets.xcassets in Resources */,
+				D0366FAC1C618EB900618B31 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FB51C618EBA00618B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FC01C618EBA00618B31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0366F971C618EB900618B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0366FA91C618EB900618B31 /* SecondViewController.m in Sources */,
+				D0366FA31C618EB900618B31 /* AppDelegate.m in Sources */,
+				D0366FA61C618EB900618B31 /* FirstViewController.m in Sources */,
+				D0366FA01C618EB900618B31 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FB31C618EBA00618B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0366FBC1C618EBA00618B31 /* NavTab_Power_Combo_UniteTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0366FBE1C618EBA00618B31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0366FC71C618EBA00618B31 /* NavTab_Power_Combo_UniteUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0366FB91C618EBA00618B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0366F9A1C618EB900618B31 /* NavTab-Power-Combo-Unite */;
+			targetProxy = D0366FB81C618EBA00618B31 /* PBXContainerItemProxy */;
+		};
+		D0366FC41C618EBA00618B31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0366F9A1C618EB900618B31 /* NavTab-Power-Combo-Unite */;
+			targetProxy = D0366FC31C618EBA00618B31 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0366FAA1C618EB900618B31 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0366FAB1C618EB900618B31 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0366FAF1C618EB900618B31 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0366FB01C618EB900618B31 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0366FC91C618EBA00618B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0366FCA1C618EBA00618B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0366FCC1C618EBA00618B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NavTab-Power-Combo-Unite/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-Unite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0366FCD1C618EBA00618B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "NavTab-Power-Combo-Unite/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-Unite";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D0366FCF1C618EBA00618B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NavTab-Power-Combo-UniteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-UniteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavTab-Power-Combo-Unite.app/NavTab-Power-Combo-Unite";
+			};
+			name = Debug;
+		};
+		D0366FD01C618EBA00618B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "NavTab-Power-Combo-UniteTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-UniteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NavTab-Power-Combo-Unite.app/NavTab-Power-Combo-Unite";
+			};
+			name = Release;
+		};
+		D0366FD21C618EBA00618B31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NavTab-Power-Combo-UniteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-UniteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NavTab-Power-Combo-Unite";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D0366FD31C618EBA00618B31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "NavTab-Power-Combo-UniteUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.NavTab-Power-Combo-UniteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "NavTab-Power-Combo-Unite";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0366F961C618EB900618B31 /* Build configuration list for PBXProject "NavTab-Power-Combo-Unite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0366FC91C618EBA00618B31 /* Debug */,
+				D0366FCA1C618EBA00618B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0366FCB1C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-Unite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0366FCC1C618EBA00618B31 /* Debug */,
+				D0366FCD1C618EBA00618B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0366FCE1C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-UniteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0366FCF1C618EBA00618B31 /* Debug */,
+				D0366FD01C618EBA00618B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0366FD11C618EBA00618B31 /* Build configuration list for PBXNativeTarget "NavTab-Power-Combo-UniteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0366FD21C618EBA00618B31 /* Debug */,
+				D0366FD31C618EBA00618B31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0366F931C618EB900618B31 /* Project object */;
+}
