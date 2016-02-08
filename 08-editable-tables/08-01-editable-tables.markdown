@@ -88,7 +88,7 @@ First let's add a property to the view controller that will store the array of s
 @end
 ```
 
-This is a class extension, or *category*, identified by the appearance of parenthesis `()` after the `@interface` declaration. Categories allow us to extend the functionality of existing objects in the runtime. With cateogires we can add methods to other classes just like we add methods to our own subclasses.
+This is a class extension, or *category*, identified by the appearance of parenthesis `()` after the `@interface` declaration. Categories allow us to extend the functionality of existing objects in the runtime. With categories we can add methods to other classes just like we add methods to our own subclasses.
 
 Moreover this is the "private" clas extension because no identifier appears inside the parenthesis. Normally you name a class extension with a word or phrase inside the parenthesis. With private class extensions, which are supported only for your own custom classes, you can also add properties to the class that are hidden from other developers because they don't appear in the header file.
 
