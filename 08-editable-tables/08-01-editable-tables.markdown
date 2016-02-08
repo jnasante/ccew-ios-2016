@@ -143,7 +143,7 @@ Now we'll just refer to this property in our data source methods. Modify them so
 }
 ```
 
-Run the application again to confirm that you changes to the data model and to the data source methods are working.
+Run the application again to confirm that your changes to the data model and to the data source methods are working.
 
 ## The Detail View
 
