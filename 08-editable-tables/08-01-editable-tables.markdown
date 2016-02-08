@@ -264,7 +264,7 @@ This is pretty magical. The method `mutableArrayValueForKey:` generates the prox
 
 The object this method returns behaves like a mutable array with mutable array methods, so we can call `addObject:` on it. But it is a proxy for `items`, so it actually makes the change to the underlying array, continuing to access it by it's name, `@"items"`.
 
-**Dynamica table view changes**
+**Dynamic table view changes**
 
 Right now we're refreshing the entire table view after making a change to a single row on it. Calling `reloadData` forces the table view to hit the data source for new cells even when the other visible cells haven't changed. That's inefficient. It's also jarring. The new row suddenly appears. What if we could only generate the cell we need and have it appear with a smooth animation?
 
