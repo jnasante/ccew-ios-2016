@@ -88,7 +88,7 @@ First let's add a property to the view controller that will store the array of s
 @end
 ```
 
-This is a class extension, or *category*, identified by the appearance of parenthesis `()` after the `@interface` declaration. Categories allow us to extend the functionality of existing objects in the runtime. With cateogires we can add methods to other classes just like we add methods to our own subclasses.
+This is a class extension, or *category*, identified by the appearance of parenthesis `()` after the `@interface` declaration. Categories allow us to extend the functionality of existing objects in the runtime. With categories we can add methods to other classes just like we add methods to our own subclasses.
 
 Moreover this is the "private" clas extension because no identifier appears inside the parenthesis. Normally you name a class extension with a word or phrase inside the parenthesis. With private class extensions, which are supported only for your own custom classes, you can also add properties to the class that are hidden from other developers because they don't appear in the header file.
 
@@ -143,7 +143,7 @@ Now we'll just refer to this property in our data source methods. Modify them so
 }
 ```
 
-Run the application again to confirm that you changes to the data model and to the data source methods are working.
+Run the application again to confirm that your changes to the data model and to the data source methods are working.
 
 ## The Detail View
 
@@ -264,7 +264,7 @@ This is pretty magical. The method `mutableArrayValueForKey:` generates the prox
 
 The object this method returns behaves like a mutable array with mutable array methods, so we can call `addObject:` on it. But it is a proxy for `items`, so it actually makes the change to the underlying array, continuing to access it by it's name, `@"items"`.
 
-**Dynamica table view changes**
+**Dynamic table view changes**
 
 Right now we're refreshing the entire table view after making a change to a single row on it. Calling `reloadData` forces the table view to hit the data source for new cells even when the other visible cells haven't changed. That's inefficient. It's also jarring. The new row suddenly appears. What if we could only generate the cell we need and have it appear with a smooth animation?
 
