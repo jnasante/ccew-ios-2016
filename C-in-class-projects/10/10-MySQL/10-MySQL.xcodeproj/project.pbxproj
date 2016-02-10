@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0990A931C6BE6B600EABD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A921C6BE6B600EABD1B /* main.m */; };
+		D0990A961C6BE6B600EABD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A951C6BE6B600EABD1B /* AppDelegate.m */; };
+		D0990A991C6BE6B600EABD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A981C6BE6B600EABD1B /* ViewController.m */; };
+		D0990A9C1C6BE6B600EABD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9A1C6BE6B600EABD1B /* Main.storyboard */; };
+		D0990A9E1C6BE6B600EABD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */; };
+		D0990AA11C6BE6B600EABD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9F1C6BE6B600EABD1B /* LaunchScreen.storyboard */; };
+		D0990AAC1C6BE6B600EABD1B /* _0_MySQLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990AAB1C6BE6B600EABD1B /* _0_MySQLTests.m */; };
+		D0990AB71C6BE6B600EABD1B /* _0_MySQLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990AB61C6BE6B600EABD1B /* _0_MySQLUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0990AA81C6BE6B600EABD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0990A861C6BE6B600EABD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0990A8D1C6BE6B600EABD1B;
+			remoteInfo = "10-MySQL";
+		};
+		D0990AB31C6BE6B600EABD1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0990A861C6BE6B600EABD1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0990A8D1C6BE6B600EABD1B;
+			remoteInfo = "10-MySQL";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0990A8E1C6BE6B600EABD1B /* 10-MySQL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "10-MySQL.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0990A921C6BE6B600EABD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D0990A941C6BE6B600EABD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0990A951C6BE6B600EABD1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0990A971C6BE6B600EABD1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D0990A981C6BE6B600EABD1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0990A9B1C6BE6B600EABD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0990AA01C6BE6B600EABD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0990AA21C6BE6B600EABD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0990AA71C6BE6B600EABD1B /* 10-MySQLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10-MySQLTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0990AAB1C6BE6B600EABD1B /* _0_MySQLTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0_MySQLTests.m; sourceTree = "<group>"; };
+		D0990AAD1C6BE6B600EABD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0990AB21C6BE6B600EABD1B /* 10-MySQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10-MySQLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0990AB61C6BE6B600EABD1B /* _0_MySQLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0_MySQLUITests.m; sourceTree = "<group>"; };
+		D0990AB81C6BE6B600EABD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0990A8B1C6BE6B600EABD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AA41C6BE6B600EABD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AAF1C6BE6B600EABD1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0990A851C6BE6B600EABD1B = {
+			isa = PBXGroup;
+			children = (
+				D0990A901C6BE6B600EABD1B /* 10-MySQL */,
+				D0990AAA1C6BE6B600EABD1B /* 10-MySQLTests */,
+				D0990AB51C6BE6B600EABD1B /* 10-MySQLUITests */,
+				D0990A8F1C6BE6B600EABD1B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0990A8F1C6BE6B600EABD1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0990A8E1C6BE6B600EABD1B /* 10-MySQL.app */,
+				D0990AA71C6BE6B600EABD1B /* 10-MySQLTests.xctest */,
+				D0990AB21C6BE6B600EABD1B /* 10-MySQLUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0990A901C6BE6B600EABD1B /* 10-MySQL */ = {
+			isa = PBXGroup;
+			children = (
+				D0990A941C6BE6B600EABD1B /* AppDelegate.h */,
+				D0990A951C6BE6B600EABD1B /* AppDelegate.m */,
+				D0990A971C6BE6B600EABD1B /* ViewController.h */,
+				D0990A981C6BE6B600EABD1B /* ViewController.m */,
+				D0990A9A1C6BE6B600EABD1B /* Main.storyboard */,
+				D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */,
+				D0990A9F1C6BE6B600EABD1B /* LaunchScreen.storyboard */,
+				D0990AA21C6BE6B600EABD1B /* Info.plist */,
+				D0990A911C6BE6B600EABD1B /* Supporting Files */,
+			);
+			path = "10-MySQL";
+			sourceTree = "<group>";
+		};
+		D0990A911C6BE6B600EABD1B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0990A921C6BE6B600EABD1B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0990AAA1C6BE6B600EABD1B /* 10-MySQLTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0990AAB1C6BE6B600EABD1B /* _0_MySQLTests.m */,
+				D0990AAD1C6BE6B600EABD1B /* Info.plist */,
+			);
+			path = "10-MySQLTests";
+			sourceTree = "<group>";
+		};
+		D0990AB51C6BE6B600EABD1B /* 10-MySQLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0990AB61C6BE6B600EABD1B /* _0_MySQLUITests.m */,
+				D0990AB81C6BE6B600EABD1B /* Info.plist */,
+			);
+			path = "10-MySQLUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0990A8D1C6BE6B600EABD1B /* 10-MySQL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0990ABB1C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQL" */;
+			buildPhases = (
+				D0990A8A1C6BE6B600EABD1B /* Sources */,
+				D0990A8B1C6BE6B600EABD1B /* Frameworks */,
+				D0990A8C1C6BE6B600EABD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "10-MySQL";
+			productName = "10-MySQL";
+			productReference = D0990A8E1C6BE6B600EABD1B /* 10-MySQL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0990AA61C6BE6B600EABD1B /* 10-MySQLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0990ABE1C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLTests" */;
+			buildPhases = (
+				D0990AA31C6BE6B600EABD1B /* Sources */,
+				D0990AA41C6BE6B600EABD1B /* Frameworks */,
+				D0990AA51C6BE6B600EABD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0990AA91C6BE6B600EABD1B /* PBXTargetDependency */,
+			);
+			name = "10-MySQLTests";
+			productName = "10-MySQLTests";
+			productReference = D0990AA71C6BE6B600EABD1B /* 10-MySQLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0990AB11C6BE6B600EABD1B /* 10-MySQLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0990AC11C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLUITests" */;
+			buildPhases = (
+				D0990AAE1C6BE6B600EABD1B /* Sources */,
+				D0990AAF1C6BE6B600EABD1B /* Frameworks */,
+				D0990AB01C6BE6B600EABD1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0990AB41C6BE6B600EABD1B /* PBXTargetDependency */,
+			);
+			name = "10-MySQLUITests";
+			productName = "10-MySQLUITests";
+			productReference = D0990AB21C6BE6B600EABD1B /* 10-MySQLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0990A861C6BE6B600EABD1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = josephasante;
+				TargetAttributes = {
+					D0990A8D1C6BE6B600EABD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					D0990AA61C6BE6B600EABD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D0990A8D1C6BE6B600EABD1B;
+					};
+					D0990AB11C6BE6B600EABD1B = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = D0990A8D1C6BE6B600EABD1B;
+					};
+				};
+			};
+			buildConfigurationList = D0990A891C6BE6B600EABD1B /* Build configuration list for PBXProject "10-MySQL" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0990A851C6BE6B600EABD1B;
+			productRefGroup = D0990A8F1C6BE6B600EABD1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0990A8D1C6BE6B600EABD1B /* 10-MySQL */,
+				D0990AA61C6BE6B600EABD1B /* 10-MySQLTests */,
+				D0990AB11C6BE6B600EABD1B /* 10-MySQLUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0990A8C1C6BE6B600EABD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0990AA11C6BE6B600EABD1B /* LaunchScreen.storyboard in Resources */,
+				D0990A9E1C6BE6B600EABD1B /* Assets.xcassets in Resources */,
+				D0990A9C1C6BE6B600EABD1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AA51C6BE6B600EABD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AB01C6BE6B600EABD1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0990A8A1C6BE6B600EABD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0990A991C6BE6B600EABD1B /* ViewController.m in Sources */,
+				D0990A961C6BE6B600EABD1B /* AppDelegate.m in Sources */,
+				D0990A931C6BE6B600EABD1B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AA31C6BE6B600EABD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0990AAC1C6BE6B600EABD1B /* _0_MySQLTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0990AAE1C6BE6B600EABD1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0990AB71C6BE6B600EABD1B /* _0_MySQLUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0990AA91C6BE6B600EABD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0990A8D1C6BE6B600EABD1B /* 10-MySQL */;
+			targetProxy = D0990AA81C6BE6B600EABD1B /* PBXContainerItemProxy */;
+		};
+		D0990AB41C6BE6B600EABD1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0990A8D1C6BE6B600EABD1B /* 10-MySQL */;
+			targetProxy = D0990AB31C6BE6B600EABD1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0990A9A1C6BE6B600EABD1B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0990A9B1C6BE6B600EABD1B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0990A9F1C6BE6B600EABD1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0990AA01C6BE6B600EABD1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0990AB91C6BE6B600EABD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D0990ABA1C6BE6B600EABD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0990ABC1C6BE6B600EABD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "10-MySQL/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D0990ABD1C6BE6B600EABD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "10-MySQL/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQL";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D0990ABF1C6BE6B600EABD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "10-MySQLTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/10-MySQL.app/10-MySQL";
+			};
+			name = Debug;
+		};
+		D0990AC01C6BE6B600EABD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "10-MySQLTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQLTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/10-MySQL.app/10-MySQL";
+			};
+			name = Release;
+		};
+		D0990AC21C6BE6B600EABD1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "10-MySQLUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "10-MySQL";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		D0990AC31C6BE6B600EABD1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "10-MySQLUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.josephasante.-0-MySQLUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "10-MySQL";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0990A891C6BE6B600EABD1B /* Build configuration list for PBXProject "10-MySQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0990AB91C6BE6B600EABD1B /* Debug */,
+				D0990ABA1C6BE6B600EABD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0990ABB1C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0990ABC1C6BE6B600EABD1B /* Debug */,
+				D0990ABD1C6BE6B600EABD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0990ABE1C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0990ABF1C6BE6B600EABD1B /* Debug */,
+				D0990AC01C6BE6B600EABD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D0990AC11C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0990AC21C6BE6B600EABD1B /* Debug */,
+				D0990AC31C6BE6B600EABD1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0990A861C6BE6B600EABD1B /* Project object */;
+}
