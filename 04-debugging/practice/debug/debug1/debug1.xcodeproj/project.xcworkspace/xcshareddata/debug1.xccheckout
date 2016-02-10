@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>668E8A04-D4CA-4055-A29E-04601018D748</string>
+	<key>IDESourceControlProjectName</key>
+	<string>debug1</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>399541D8-ADB9-42D4-8768-78E7C1B864D5</key>
+		<string>https://github.com/phildow/ccew-ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>04-debugging/practice/debug/debug1/debug1.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>399541D8-ADB9-42D4-8768-78E7C1B864D5</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/phildow/ccew-ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>399541D8-ADB9-42D4-8768-78E7C1B864D5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>399541D8-ADB9-42D4-8768-78E7C1B864D5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Curriculum 2014-2F iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
