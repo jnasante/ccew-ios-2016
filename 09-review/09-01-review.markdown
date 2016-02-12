@@ -39,7 +39,7 @@ The shared notification center instance can be accessed with:
 NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
 ```
 
-Again, that `defaultCenter` method is guarnateed to return the same object every time.
+Again, that `defaultCenter` method is guaranteed to return the same object every time.
 
 We're going to use a singleton object to manage access to our application's database. A database is a shared resource that different parts of the application need access to. At the same time we must ensure that each part of the application has access to the same in-memory representation of the underlying data on the file system.
 
@@ -47,7 +47,7 @@ If we were to use multiple instance of a database object, a change to one might 
 
 <!-- Demonstrate this on the board -->
 
-Let's begin with a basic example and then we'll implement the singleton pattern in our code. Create a new iOS project and add an iOS objective-c class to it. Call it `CCDataManager`.
+Let's begin with a basic example and then we'll implement the singleton pattern in our code. Create a new iOS project and add an iOS objective-c class to it. Call it `CCPersonManager`.
 
 In the header file add the following class method:
 

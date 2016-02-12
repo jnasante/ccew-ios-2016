@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		D0990A931C6BE6B600EABD1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A921C6BE6B600EABD1B /* main.m */; };
 		D0990A961C6BE6B600EABD1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A951C6BE6B600EABD1B /* AppDelegate.m */; };
-		D0990A991C6BE6B600EABD1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990A981C6BE6B600EABD1B /* ViewController.m */; };
 		D0990A9C1C6BE6B600EABD1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9A1C6BE6B600EABD1B /* Main.storyboard */; };
 		D0990A9E1C6BE6B600EABD1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */; };
 		D0990AA11C6BE6B600EABD1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0990A9F1C6BE6B600EABD1B /* LaunchScreen.storyboard */; };
 		D0990AAC1C6BE6B600EABD1B /* _0_MySQLTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990AAB1C6BE6B600EABD1B /* _0_MySQLTests.m */; };
 		D0990AB71C6BE6B600EABD1B /* _0_MySQLUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990AB61C6BE6B600EABD1B /* _0_MySQLUITests.m */; };
+		D0990AC61C6BF9A600EABD1B /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0990AC51C6BF9A600EABD1B /* PersonManager.m */; };
+		D0A8F9E81C6D51A2002E77BD /* AddressBook.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0A8F9E71C6D51A2002E77BD /* AddressBook.plist */; };
+		D0A8F9EB1C6D54BE002E77BD /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A8F9EA1C6D54BE002E77BD /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,6 @@
 		D0990A921C6BE6B600EABD1B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0990A941C6BE6B600EABD1B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0990A951C6BE6B600EABD1B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0990A971C6BE6B600EABD1B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0990A981C6BE6B600EABD1B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D0990A9B1C6BE6B600EABD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0990AA01C6BE6B600EABD1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,11 @@
 		D0990AB21C6BE6B600EABD1B /* 10-MySQLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "10-MySQLUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0990AB61C6BE6B600EABD1B /* _0_MySQLUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _0_MySQLUITests.m; sourceTree = "<group>"; };
 		D0990AB81C6BE6B600EABD1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0990AC41C6BF9A600EABD1B /* PersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
+		D0990AC51C6BF9A600EABD1B /* PersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonManager.m; sourceTree = "<group>"; };
+		D0A8F9E71C6D51A2002E77BD /* AddressBook.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AddressBook.plist; sourceTree = "<group>"; };
+		D0A8F9E91C6D54BE002E77BD /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		D0A8F9EA1C6D54BE002E77BD /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +106,12 @@
 		D0990A901C6BE6B600EABD1B /* 10-MySQL */ = {
 			isa = PBXGroup;
 			children = (
+				D0A8F9E71C6D51A2002E77BD /* AddressBook.plist */,
+				D0990AC71C6BF9CB00EABD1B /* Data Models */,
 				D0990A941C6BE6B600EABD1B /* AppDelegate.h */,
 				D0990A951C6BE6B600EABD1B /* AppDelegate.m */,
-				D0990A971C6BE6B600EABD1B /* ViewController.h */,
-				D0990A981C6BE6B600EABD1B /* ViewController.m */,
+				D0A8F9E91C6D54BE002E77BD /* TableViewController.h */,
+				D0A8F9EA1C6D54BE002E77BD /* TableViewController.m */,
 				D0990A9A1C6BE6B600EABD1B /* Main.storyboard */,
 				D0990A9D1C6BE6B600EABD1B /* Assets.xcassets */,
 				D0990A9F1C6BE6B600EABD1B /* LaunchScreen.storyboard */,
@@ -138,6 +145,15 @@
 				D0990AB81C6BE6B600EABD1B /* Info.plist */,
 			);
 			path = "10-MySQLUITests";
+			sourceTree = "<group>";
+		};
+		D0990AC71C6BF9CB00EABD1B /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				D0990AC41C6BF9A600EABD1B /* PersonManager.h */,
+				D0990AC51C6BF9A600EABD1B /* PersonManager.m */,
+			);
+			name = "Data Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0A8F9E81C6D51A2002E77BD /* AddressBook.plist in Resources */,
 				D0990AA11C6BE6B600EABD1B /* LaunchScreen.storyboard in Resources */,
 				D0990A9E1C6BE6B600EABD1B /* Assets.xcassets in Resources */,
 				D0990A9C1C6BE6B600EABD1B /* Main.storyboard in Resources */,
@@ -270,8 +287,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0990A991C6BE6B600EABD1B /* ViewController.m in Sources */,
+				D0990AC61C6BF9A600EABD1B /* PersonManager.m in Sources */,
 				D0990A961C6BE6B600EABD1B /* AppDelegate.m in Sources */,
+				D0A8F9EB1C6D54BE002E77BD /* TableViewController.m in Sources */,
 				D0990A931C6BE6B600EABD1B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,6 +514,7 @@
 				D0990ABD1C6BE6B600EABD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0990ABE1C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +523,7 @@
 				D0990AC01C6BE6B600EABD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0990AC11C6BE6B600EABD1B /* Build configuration list for PBXNativeTarget "10-MySQLUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +532,7 @@
 				D0990AC31C6BE6B600EABD1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

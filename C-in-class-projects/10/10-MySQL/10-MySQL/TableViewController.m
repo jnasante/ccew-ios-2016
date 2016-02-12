@@ -1,8 +1,8 @@
 //
 //  TableViewController.m
-//  FileSystem-Table
+//  10-MySQL
 //
-//  Created by Joseph Asante on 2/9/16.
+//  Created by Joseph Asante on 2/11/16.
 //  Copyright © 2016 josephasante. All rights reserved.
 //
 
@@ -26,7 +26,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *path = [documentsPath stringByAppendingPathComponent:@"DefaultValues.plist"];
+    NSString *path = [documentsPath stringByAppendingPathComponent:@"AddressBook.plist"];
     self.items = [NSArray arrayWithContentsOfFile:path];
 }
 
@@ -49,11 +49,23 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = self.items[indexPath.row];
+    // Configure the cell...
+    NSString *firstName = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"firstName"];
+    NSString *lastName = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"lastName"];
+    NSString *fullName = [firstName stringByAppendingFormat:@" %@", lastName];
+    NSString *phoneNumber = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"phoneNumber"];
+    
+    
+    
+    cell.textLabel.text = fullName;
+    cell.detailTextLabel.text = phoneNumber;
     
     return cell;
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -72,8 +84,8 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
-}*/
-
+}
+*/
 
 /*
 // Override to support rearranging the table view.

@@ -17,6 +17,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
+    NSString *destinationPath = [documentsPath stringByAppendingPathComponent:@"AddressBook.plist"];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"AddressBook" ofType:@"plist"];
+    
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    NSError *error;
+    BOOL success;
+    
+    if (![fm fileExistsAtPath:destinationPath]) {
+        success = [fm copyItemAtPath:sourcePath toPath:destinationPath error:&error];
+        
+        if (!success) {
+            NSLog(@"Problem copying file from %@ to %@, error: %@", sourcePath, destinationPath, error);
+        } else {
+            NSLog(@"Copied default values from resource to documents directory");
+        }
+    }
+    
     return YES;
 }
 

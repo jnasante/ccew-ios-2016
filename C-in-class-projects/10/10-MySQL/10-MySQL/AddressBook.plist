@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>firstName</key>
+		<string>Mr.</string>
+		<key>lastName</key>
+		<string>T</string>
+		<key>phoneNumber</key>
+		<string>1-800-PITY-THE-FOOL</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Gandalf</string>
+		<key>lastName</key>
+		<string>the Gray</string>
+		<key>phoneNumber</key>
+		<string>1-888-SHALL-NOT-PASS</string>
+	</dict>
+	<dict>
+		<key>firstName</key>
+		<string>Phil</string>
+		<key>lastName</key>
+		<string>Dow</string>
+		<key>phoneNumber</key>
+		<string>1-800-PHIL-KNEW</string>
+	</dict>
+</array>
+</plist>
