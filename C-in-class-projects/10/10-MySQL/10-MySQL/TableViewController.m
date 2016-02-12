@@ -7,6 +7,8 @@
 //
 
 #import "TableViewController.h"
+#import "PersonManager.h"
+#import "Person.h"
 
 @interface TableViewController ()
 
@@ -25,9 +27,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *path = [documentsPath stringByAppendingPathComponent:@"AddressBook.plist"];
-    self.items = [NSArray arrayWithContentsOfFile:path];
+    [[PersonManager sharedInstance] reloadAddressBook];
+    self.items = [[PersonManager sharedInstance] people];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,21 +51,24 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell...
-    NSString *firstName = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"firstName"];
-    NSString *lastName = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"lastName"];
-    NSString *fullName = [firstName stringByAppendingFormat:@" %@", lastName];
-    NSString *phoneNumber = [(NSDictionary*)self.items[indexPath.row]objectForKey:@"phoneNumber"];
+    Person *person = self.items[indexPath.row];
     
-    
-    
-    cell.textLabel.text = fullName;
-    cell.detailTextLabel.text = phoneNumber;
+    cell.textLabel.text = [person fullName];
+    cell.detailTextLabel.text = person.phoneNumber;
     
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if (cell.accessoryType == UITableViewCellAccessoryCheckmark) {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+    
+    [cell setSelected:NO];
 }
 
 /*

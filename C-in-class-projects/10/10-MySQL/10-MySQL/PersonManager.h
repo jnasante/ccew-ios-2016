@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString * const PersonManagerCreatedPerson;
+@class FMDatabase;
 
 @interface PersonManager : NSObject
 
+@property (strong) FMDatabase *database;
+@property (strong, nonatomic) NSArray *people;
+
 + (instancetype)sharedInstance;
+
+- (NSString*) addressBookPath;
+- (void) reloadAddressBook;
 
 @end

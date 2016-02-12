@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PersonManager.h"
+#import "fmdb/FMDatabase.h"
 
 @interface AppDelegate ()
 
@@ -18,25 +20,50 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSString *documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
-    NSString *destinationPath = [documentsPath stringByAppendingPathComponent:@"AddressBook.plist"];
-    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"AddressBook" ofType:@"plist"];
-    
-    NSFileManager *fm = [[NSFileManager alloc] init];
-    NSError *error;
-    BOOL success;
-    
-    if (![fm fileExistsAtPath:destinationPath]) {
-        success = [fm copyItemAtPath:sourcePath toPath:destinationPath error:&error];
-        
-        if (!success) {
-            NSLog(@"Problem copying file from %@ to %@, error: %@", sourcePath, destinationPath, error);
-        } else {
-            NSLog(@"Copied default values from resource to documents directory");
-        }
-    }
+    [self copyDefaultAddressBookToDocumentsDirectory];
     
     return YES;
+}
+
+- (void) copyDefaultAddressBookToDocumentsDirectory {
+   
+    NSString *destinationPath = [[PersonManager sharedInstance] addressBookPath];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"AddressBook" ofType:@"plist"];
+
+    NSFileManager *fm = [[NSFileManager alloc] init];
+
+    // Copy file
+    if (![fm fileExistsAtPath:destinationPath]) {
+        FMDatabase *database = [FMDatabase databaseWithPath:destinationPath];
+        if (![database open]) {
+            NSLog(@"You fool! There was a problem creating the default database.");
+        } else {
+            // ...
+            NSString *create = @"CREATE TABLE people( "
+            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            "firstName TEXT, "
+            "lastName TEXT, "
+            "phoneNumber TEXT)";
+            
+            BOOL success = [database executeUpdate:create];
+            if (!success) {
+                NSLog(@"You idiot. Write a better query statement.");
+            } else {
+                NSArray *people = [NSArray arrayWithContentsOfFile:sourcePath];
+                NSString *insert = @"INSERT INTO people (firstName, lastName, phoneNumber) "
+                "VALUES (:firstName, :lastName, :phoneNumber)";
+                
+                for (NSDictionary *person in people) {
+                    BOOL success = [database executeUpdate:insert withParameterDictionary:person];
+                    if (!success) {
+                        NSLog(@"There was a problem adding default data to the destinations table: %@", person);
+                    }
+                }
+            }
+            
+            [database close];
+        }
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
