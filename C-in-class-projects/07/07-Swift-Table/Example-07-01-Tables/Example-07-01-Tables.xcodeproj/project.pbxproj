@@ -156,6 +156,7 @@
 		E3EE7E7D1BA484C4006D952D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Phil Dow";
 				TargetAttributes = {
@@ -409,6 +410,7 @@
 				E3EE7EA61BA484C5006D952D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3EE7EA71BA484C5006D952D /* Build configuration list for PBXNativeTarget "Example-07-01-TablesTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +419,7 @@
 				E3EE7EA91BA484C5006D952D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
