@@ -11,6 +11,7 @@ Preparation
 6. Install git (Xcode does this for you on the Mac, GitBash on a PC)
 7. Configure your git name and email
 8. Configure you SSH settings for git and github
+9. Git tutorial: http://rogerdudler.github.io/git-guide/
 
 
 ## Resources
