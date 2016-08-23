@@ -1,7 +1,7 @@
 Interface Builder Connections
 ===================================
 
-We've seen that Obj-C code resides in the header and implementation files and that interfaces reside in storboards. There are two ways to connect code to interface: *outlets* and *actions*.
+We've seen that Obj-C code resides in the header and implementation files and that interfaces reside in storyboards. There are two ways to connect code to interface: *outlets* and *actions*.
 
 An outlet is a one way connection from the code to the interface. It is a way for the code to refer to an object in the interface so that it can manipulate it while the programming is running.
 
