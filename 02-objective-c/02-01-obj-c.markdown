@@ -14,11 +14,14 @@ Obj-C also provides a number of common structures which you will become familiar
 **Example**
 
 ```
-BOOL cancelling;NSInteger kOptionsTag = 66;
-CGRect frame = CGRectMake(10, 83, 300, 300);
+BOOL cancelling;
+NSInteger kOptionsTag = 66;
+
+CGRect frame = CGRectMake(10, 83, 300, 300);
 CGPoint aPoint = CGPointMake(12, 60);
 
-aPoint.x; // = 12aPoint.y; // = 160
+aPoint.x; // = 12
+aPoint.y; // = 160
 ```
 
 Just about every other value in obj-c, however, is an object, and objects are accessed through pointers. We’ll talk more about pointers more. For now, understand that a pointer is indicated using the asterisk (`*`), which comes from the C language, so that anytime you declare an object variable you are really declaring a pointer variable to that object.
@@ -186,7 +189,7 @@ float niceFloat = 1.45;
 int niceInt = (int)niceFloat;
 
 // object typecasting
-UIButton *cell = (UIButton*)[cell viewWithTag:101];
+UIButton *cell = (UIButton*)[self.view viewWithTag:101];
 ```
 
 In this example, we are typecasting the object returned by the `viewWithTag:` method to `UIButton`. Normally this method returns an instance of `UIView`, which is the superclass of `UIButton`. But `UIButton` implements additional methods not available on `UIView`, and when we call one of these methods on an object that the compiler thinks is a `UIView`, the compiler will raise a warning. Typecasting hints to the compiler that we really have a `UIButton` here, and that we’re calling methods that it really implements.
@@ -276,7 +279,7 @@ Their implementation looks like:
 }
 
 - (NSString*) objectTitle {
-    return objectTitle;
+    return _objectTitle;
 }
 ```
 
