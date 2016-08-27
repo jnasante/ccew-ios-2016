@@ -62,18 +62,6 @@
     
     id someObject;
     
-        // References
-//    NSString *first = [NSMutableString stringWithFormat:@"someText"];
-//    NSString *second = first;
-//
-//    NSLog(first);
-//    NSLog(second);
-//    
-//    second = @"someOthertext";
-//    
-//    NSLog(first);
-//    NSLog(second);
-    
     self.objectTitle = [NSString stringWithString:@"coolTitle"];
     
     // Objects
@@ -89,6 +77,18 @@
     self.weakString = [NSString stringWithFormat:@"I'm so weak"];
 //    self.weakString = [NSString stringWithString:@"I'm so weak"];
 //    self.weakString = @"I'm so weak";
+    
+    // Demonstrating pointers
+    NSMutableString *firstString = [NSMutableString stringWithString:@"Some cool text"];
+    NSMutableString *secondString = firstString;
+    
+    NSLog(firstString);
+    NSLog(secondString);
+    
+    [firstString appendString:@" appended to some even cooler text"];
+    
+    NSLog(firstString);
+    NSLog(secondString);
 }
 
 - (IBAction)showWeakness:(id)sender
