@@ -10,8 +10,10 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) NSString *objectTitle;
+@property (strong, nonatomic) NSString *objectTitle;
 @property NSInteger someInt;
+
+@property (weak) NSString *weakString;
 
 @end
 

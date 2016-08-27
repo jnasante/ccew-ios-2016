@@ -85,6 +85,16 @@
     Person* bob = [[Person alloc] initWithFirstName:@"Bob"];
     Person* alice = [Person personWithFirstName:@"Alice" lastName:@"Wunderlnd"];
     
+    // Test of weakness
+    self.weakString = [NSString stringWithFormat:@"I'm so weak"];
+//    self.weakString = [NSString stringWithString:@"I'm so weak"];
+//    self.weakString = @"I'm so weak";
+}
+
+- (IBAction)showWeakness:(id)sender
+{
+    NSString *test = self.weakString;
+    NSLog(@"%@",test);
 }
 
 - (void)someActionWithSomeString:(NSString*)someString someOtherString:(NSString*)otherString {
