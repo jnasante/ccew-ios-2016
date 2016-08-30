@@ -41,7 +41,7 @@ The newer array literals syntax allows you to create arrays more simply. Use the
 NSArray *array = @[aDate, aValue, aString];
 ```
 
-Note that it is not necessary to `nil` terminate an array literal, and in fact doing so will prevent your application from compiling. 
+Note that it is not necessary to `nil` terminate an array literal, and in fact doing so will not prevent your application from compiling (but will generate a warning). 
 
 Also note that `nil` and other primitive values cannot appear in an array. `nil` is a primitive, not an object, and arrays can only contain objects. Attempting to populate an array with `nil` will result in an exception being thrown and your application crashing.
 
