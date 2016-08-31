@@ -75,6 +75,7 @@
     
     // Test of weakness
     self.weakString = [NSString stringWithFormat:@"I'm so weak"];
+    NSLog(@"%@", self.weakString);
 //    self.weakString = [NSString stringWithString:@"I'm so weak"];
 //    self.weakString = @"I'm so weak";
     

@@ -13,7 +13,7 @@
 @property (strong, nonatomic) NSString *objectTitle;
 @property NSInteger someInt;
 
-@property (weak) NSString *weakString;
+@property (strong) NSString *weakString;
 
 @end
 
