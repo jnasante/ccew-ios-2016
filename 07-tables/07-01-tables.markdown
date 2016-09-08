@@ -55,7 +55,7 @@ Run the application again. It crashes. What’s happening? It turns out that the
 First, how do we indicate our class conforms to a protocol? We put the protocol names in greater than and less than signs after the interface declaration for the class:
 
 ```objective-c
-@interface CCViewController : UIViewController <UITableViewDataSource, UITabBarDelegate>
+@interface CCViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @end
 ```
 
