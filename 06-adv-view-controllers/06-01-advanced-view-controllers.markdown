@@ -1,7 +1,7 @@
 Advanced View Controllers
 ==============================
 
-The iOS offers a number of specialied view controllers for common interfaces. The two that form the basis of most applications are the `UITabBarController` and the `UINavigationController`. 
+iOS offers a number of specialized view controllers for common interfaces. The two that form the basis of most applications are the `UITabBarController` and the `UINavigationController`. 
 
 ## Tab Bar Controller
 
