@@ -20,6 +20,8 @@
     
     self.birthdateLabel.text = self.birthdate;
     NSLog(@"%@", self.birthdate);
+    
+    self.navigationItem.title = @"About Virtual Phil";
 }
 
 - (void)didReceiveMemoryWarning {

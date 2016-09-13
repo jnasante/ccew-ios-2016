@@ -115,7 +115,7 @@
     // Pass the selected object to the new view controller.
     ViewController *detailView = (ViewController*)segue.destinationViewController;
     PhilTableViewCell *cell = (PhilTableViewCell*)sender;
-    detailView.birthdate = cell.birthdateLabel.text;
+    detailView.birthdate = [@"Time of birth: " stringByAppendingString:cell.birthdateLabel.text];
 }
 
 
