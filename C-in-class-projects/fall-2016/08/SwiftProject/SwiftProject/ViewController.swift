@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func funkyFunc(str:String) -> (str: String, int:Int) {
+    func funkyFunc(_ str:String) -> (str: String, int:Int) {
         return (str, 5)
     }
 

@@ -193,13 +193,16 @@
 				TargetAttributes = {
 					D05FEBF31D88E25F00368388 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					D05FEC071D88E25F00368388 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D05FEBF31D88E25F00368388;
 					};
 					D05FEC121D88E25F00368388 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = D05FEBF31D88E25F00368388;
 					};
 				};
@@ -403,6 +406,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -414,6 +418,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -425,6 +430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftProject.app/SwiftProject";
 			};
 			name = Debug;
@@ -437,6 +443,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProjectTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftProject.app/SwiftProject";
 			};
 			name = Release;
@@ -448,6 +455,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SwiftProject;
 			};
 			name = Debug;
@@ -459,6 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.josephasante.SwiftProjectUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = SwiftProject;
 			};
 			name = Release;
@@ -482,6 +491,7 @@
 				D05FEC1E1D88E25F00368388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D05FEC1F1D88E25F00368388 /* Build configuration list for PBXNativeTarget "SwiftProjectTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +500,7 @@
 				D05FEC211D88E25F00368388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D05FEC221D88E25F00368388 /* Build configuration list for PBXNativeTarget "SwiftProjectUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +509,7 @@
 				D05FEC241D88E25F00368388 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
