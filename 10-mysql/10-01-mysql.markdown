@@ -236,9 +236,9 @@ Otherwise, if everything worked ok the application should run and you should see
 
 It turns out we can. The simulator keeps a copy of the iOS filesystem in: 
 
-**~/Library/Application Support/iPhone Simulator**
+**~/Library/Developer/CoreSimulator/Devices/**
 
-From the Finder, choose the *Go : Go to Folder...* menu and paste that filepath in. You'll see a number of simulator's represented and will have to select the right one. For me it's *7.1*.
+From the Finder, choose the *Go : Go to Folder...* menu and paste that filepath in. You'll see a number of simulators represented and will have to select the right one.
 
 Inside that folder you'll find an *Applications* directory with a number of UUID named folders (hexadecimal strings that are unique identifiers). You'll have to find the one for your application. Inside that folder you'll find the *Documents* folder for your application which will contain the sqlite and plist files.
 
