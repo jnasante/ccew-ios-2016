@@ -8,14 +8,13 @@
 
 #import "AppDelegate.h"
 #import "PersonManager.h"
-#import "fmdb/FMDatabase.h"
+#import "FMDatabase.h"
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -25,38 +24,43 @@
     return YES;
 }
 
-- (void) copyDefaultAddressBookToDocumentsDirectory {
-   
-    NSString *destinationPath = [[PersonManager sharedInstance] addressBookPath];
-    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"AddressBook" ofType:@"plist"];
-
+- (void) copyDefaultAddressBookToDocumentsDirectory
+{
+    NSString *addressBookPath = [[PersonManager sharedInstance] addressBookPath];
+    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"AddressBook" ofType:@"sqlite"];
+    
     NSFileManager *fm = [[NSFileManager alloc] init];
-
+    
     // Copy file
-    if (![fm fileExistsAtPath:destinationPath]) {
-        FMDatabase *database = [FMDatabase databaseWithPath:destinationPath];
+    if (![fm fileExistsAtPath:addressBookPath]) {
+        
+        FMDatabase *database = [FMDatabase databaseWithPath:addressBookPath];
+        
         if (![database open]) {
-            NSLog(@"You fool! There was a problem creating the default database.");
+            NSLog(@"Problem creating database at path %@", addressBookPath);
         } else {
-            // ...
+            NSLog(@"Created default database");
+            
+            // Database stuff
             NSString *create = @"CREATE TABLE people( "
-            "id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            "firstName TEXT, "
-            "lastName TEXT, "
-            "phoneNumber TEXT)";
+                "id INTEGER PRIMARY KEY AUTOINCREMENT, "
+                "firstName TEXT, "
+                "lastName TEXT, "
+                "phoneNumber TEXT)";
             
             BOOL success = [database executeUpdate:create];
             if (!success) {
-                NSLog(@"You idiot. Write a better query statement.");
+                //error
+                NSLog(@"Sorry, I didn't catch that");
             } else {
                 NSArray *people = [NSArray arrayWithContentsOfFile:sourcePath];
                 NSString *insert = @"INSERT INTO people (firstName, lastName, phoneNumber) "
-                "VALUES (:firstName, :lastName, :phoneNumber)";
+                    "VALUES (:firstName, :lastName, :phoneNumber)";
                 
                 for (NSDictionary *person in people) {
                     BOOL success = [database executeUpdate:insert withParameterDictionary:person];
                     if (!success) {
-                        NSLog(@"There was a problem adding default data to the destinations table: %@", person);
+                        NSLog(@"I'm sorry master, I can't do that right now.");
                     }
                 }
             }

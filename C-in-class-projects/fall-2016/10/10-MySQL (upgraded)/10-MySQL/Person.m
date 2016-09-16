@@ -35,13 +35,16 @@ NSString * const PersonManagerCreatedPerson = @"PersonManagerCreatedPerson";
 
 - (id) initWithDictionary:(NSDictionary*)dictionary {
     self = [self init];
-    if(self) {
+    
+    if (self) {
         [self setValuesForKeysWithDictionary:dictionary];
     }
+        
     return self;
 }
 
-- (void) setValue:(id)value forUndefinedKey:(NSString *)key {
+- (void) setValue:(id)value forUndefinedKey:(NSString *)key
+{
     if ([key isEqualToString:@"id"]) {
         [self setValue:value forKey:@"ID"];
     } else {
@@ -49,7 +52,8 @@ NSString * const PersonManagerCreatedPerson = @"PersonManagerCreatedPerson";
     }
 }
 
-- (id) valueForUndefinedKey:(NSString *)key {
+- (id) valueForUndefinedKey:(NSString *)key
+{
     if ([key isEqualToString:@"id"]) {
         return [self valueForKey:@"ID"];
     } else {

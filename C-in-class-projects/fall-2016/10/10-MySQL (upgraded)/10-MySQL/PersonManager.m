@@ -7,8 +7,8 @@
 //
 
 #import "PersonManager.h"
-#import "FMDatabase.h"
 #import "Person.h"
+#import "FMDatabase.h"
 
 @implementation PersonManager
 
@@ -34,17 +34,19 @@
 {
     [self openAddressBook];
     
-    NSString *query = @"SELECT * FROM PEOPLE";
+    NSString *query = @"SELECT * FROM people";
     FMResultSet *results = [self.database executeQuery:query];
     NSMutableArray *mutablePeople = [NSMutableArray array];
     
     while ([results next]) {
-        NSDictionary *aResult = [results resultDictionary];
-        Person *person = [[Person alloc] initWithDictionary:aResult];
+        NSDictionary *result = [results resultDictionary];
+        Person *person = [[Person alloc] initWithDictionary:result];
         [mutablePeople addObject:person];
     }
     
     self.people = mutablePeople;
+    
+    [self closeAddressBook];
 }
 
 - (void) openAddressBook
@@ -56,11 +58,11 @@
     NSFileManager *fm = [[NSFileManager alloc] init];
     
     if (![fm fileExistsAtPath:[self addressBookPath]]) {
-        NSLog(@"ERROR. ERROR. Database should exists at this point. Sum'n ain't right.");
+        NSLog(@"ERROR ERROR CANNOT COMPUTE");
     } else {
         self.database = [FMDatabase databaseWithPath:[self addressBookPath]];
         if (![self.database open]) {
-            NSLog(@"There was a problem opening the default database");
+            NSLog(@"There was a problem bro");
             self.database = nil;
         }
     }

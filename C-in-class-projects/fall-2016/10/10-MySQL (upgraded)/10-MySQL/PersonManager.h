@@ -17,7 +17,7 @@
 
 + (instancetype)sharedInstance;
 
-- (NSString*) addressBookPath;
 - (void) reloadAddressBook;
+- (NSString*) addressBookPath;
 
 @end

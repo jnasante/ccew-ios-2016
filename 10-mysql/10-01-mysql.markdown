@@ -7,9 +7,13 @@ SQLite and FMDB
 
 The sqlite homepage. Go here for documentation and API references.
 
+[https://github.com/stephencelis/SQLite.swift](https://github.com/stephencelis/SQLite.swift)
+
+A seemingly good Swift wrapper for SQLite. To use it, follow the instructions in the README file on the github page.
+
 [https://github.com/ccgus/fmdb](https://github.com/ccgus/fmdb)
 
-The FDMB repository on GitHub. Download FDMB using the Download ZIP button on the bottom right. Add the *src / fmdb* files to your project and follow the additional instructions below.
+The FMDB repository on GitHub (for Objective-C. Download FDMB using the Download ZIP button on the bottom right. Add the *src / fmdb* files to your project and follow the additional instructions below.
 
 [Liya (Mac App Store)](https://itunes.apple.com/us/app/liya/id455484422?mt=12)
 
