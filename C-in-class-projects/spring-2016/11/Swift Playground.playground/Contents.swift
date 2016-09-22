@@ -26,7 +26,7 @@ var myOldFloat: CGFloat = 1.1
 var myNewFloat: Double = 1.1
 
 var array = [3, 5, 2, 4]
-array.removeAtIndex(2)
+array.remove(at:2)
 
 func returnStuff() -> [Int: Double] {
     var ret = [Int: Double]()

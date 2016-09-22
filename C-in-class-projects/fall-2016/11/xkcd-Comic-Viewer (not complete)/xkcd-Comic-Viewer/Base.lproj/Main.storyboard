@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="xkcd_Comic_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yr-eh-8lQ">
+                                <rect key="frame" x="20" y="40" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="xMD-P6-dNp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y38-kT-Icc">
+                                <rect key="frame" x="20" y="80" width="560" height="454"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-N9-Su1">
+                                <rect key="frame" x="20" y="539" width="32" height="41"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="goToPreviousComic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hln-mV-Bvm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSs-MR-3fb">
+                                <rect key="frame" x="548" y="539" width="32" height="41"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="goToNextComic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXJ-eM-efR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zSs-MR-3fb" firstAttribute="width" secondItem="UhS-N9-Su1" secondAttribute="width" id="0Xu-dV-c52"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y38-kT-Icc" secondAttribute="trailing" id="2PH-Gg-VGW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zSs-MR-3fb" secondAttribute="bottom" constant="20" id="84b-vj-wkX"/>
+                            <constraint firstItem="zSs-MR-3fb" firstAttribute="top" secondItem="y38-kT-Icc" secondAttribute="bottom" constant="5" id="8dP-DO-QrY"/>
+                            <constraint firstItem="8yr-eh-8lQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="9vW-2H-Axl"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y38-kT-Icc" secondAttribute="bottom" constant="66" id="AU4-XT-bso"/>
+                            <constraint firstItem="8yr-eh-8lQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="I4H-O5-kUU"/>
+                            <constraint firstItem="UhS-N9-Su1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VVT-da-gdg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UhS-N9-Su1" secondAttribute="bottom" constant="20" id="Zud-Me-fKr"/>
+                            <constraint firstItem="y38-kT-Icc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aFP-Zr-7lO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zSs-MR-3fb" secondAttribute="trailing" id="adP-zF-5md"/>
+                            <constraint firstItem="UhS-N9-Su1" firstAttribute="top" secondItem="y38-kT-Icc" secondAttribute="bottom" constant="5" id="pp4-LY-vmW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8yr-eh-8lQ" secondAttribute="trailing" id="vTB-f7-eG9"/>
+                            <constraint firstItem="y38-kT-Icc" firstAttribute="top" secondItem="8yr-eh-8lQ" secondAttribute="bottom" constant="10" id="wNu-rQ-EtF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="y38-kT-Icc" id="DZ6-0f-n9D"/>
+                        <outlet property="titleLabel" destination="8yr-eh-8lQ" id="njl-ti-qmO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="321"/>
+        </scene>
+    </scenes>
+</document>
