@@ -1,0 +1,6 @@
+[submodule "C-in-class-projects/fall-2016/11/Alamofire"]
+	path = C-in-class-projects/fall-2016/11/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git
+[submodule "C-in-class-projects/fall-2016/11/11-networking/Alamofire"]
+	path = C-in-class-projects/fall-2016/11/11-networking/Alamofire
+	url = https://github.com/Alamofire/Alamofire.git

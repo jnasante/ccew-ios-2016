@@ -1,15 +1,15 @@
 //
-//  xkcd_Comic_ViewerTests.swift
-//  xkcd-Comic-ViewerTests
+//  _1_networkingTests.swift
+//  11-networkingTests
 //
-//  Created by Joseph Asante on 2/18/16.
+//  Created by Joseph Asante on 9/22/16.
 //  Copyright © 2016 josephasante. All rights reserved.
 //
 
 import XCTest
-@testable import xkcd_Comic_Viewer
+@testable import _1_networking
 
-class xkcd_Comic_ViewerTests: XCTestCase {
+class _1_networkingTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

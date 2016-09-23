@@ -33,24 +33,24 @@ class ViewController: UIViewController {
     }
 
     // MARK: Action Methods
-    @IBAction func goToPreviousComic(sender: AnyObject) {
+    @IBAction func goToPreviousComic(_ sender: AnyObject) {
     }
     
     
-    @IBAction func goToNextComic(sender: AnyObject) {
+    @IBAction func goToNextComic(_ sender: AnyObject) {
     }
     
     // MARK: Networking
-    func getComic(currentComicNumber : Int) {
+    func getComic(_ currentComicNumber : Int) {
         
         comicURL = "\(hostURL)\(comicNumber)\(jsonParameter)"
         let url = currentComicNumber == 0 ? currentComicURL : comicURL
         
-        if let comicURL = NSURL(string: url) {
+        if let comicURL = URL(string: url!) {
             // Get data from URL
             getDataFromURL(comicURL, completion: { (data) -> Void in
                 
-                if let json: NSDictionary = try! NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers) as? NSDictionary {
+                if let json: NSDictionary = try! JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
                     
                     // Where the magic happens
                     
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
                     
                     // Set image
                     if let imageURL = json["img"] as? String {
-                        self.downloadImage(NSURL(string: imageURL)!)
+                        self.downloadImage(URL(string: imageURL)!)
                         
                     }
                 }
@@ -78,20 +78,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func getDataFromURL(url: NSURL, completion: ((data: NSData?) -> Void)) {
-        NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in completion(data: data) }.resume()
+    func getDataFromURL(_ url: URL, completion: @escaping ((_ data: Data?) -> Void)) {
+        URLSession.shared.dataTask(with: url, completionHandler: { (data, response, error) in completion(data) }) .resume()
     }
     
     // MARK: UI Elements
-    func setComicTitle(string: String) {
-        dispatch_async(dispatch_get_main_queue()) {
+    func setComicTitle(_ string: String) {
+        DispatchQueue.main.async {
             self.titleLabel.text = string
         }
     }
     
-    func downloadImage(url: NSURL) {
+    func downloadImage(_ url: URL) {
         getDataFromURL(url) { data in
-            dispatch_async(dispatch_get_main_queue()) {
+            DispatchQueue.main.async {
                 self.imageView.image = UIImage(data: data!)
             }
         }
