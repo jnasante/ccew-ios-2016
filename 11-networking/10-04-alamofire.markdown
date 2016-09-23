@@ -7,7 +7,7 @@ Alamofire works much like AFNetworking in that it is a massive library built to 
 
 ## Install and read about Alamofire 
 
-Download Alamofire from the [https://github.com/Alamofire/Alamofire](GitHub repository).
+Download Alamofire from the [GitHub repository](https://github.com/Alamofire/Alamofire).
 
 It's generally better to use the first method with cocoa pods and carthage, as it allows you to keep up with updates as easily as typing "carthage update" in the command line. Otherwise, manual installation is still relatively simple.
 
